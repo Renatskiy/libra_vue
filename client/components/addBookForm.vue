@@ -98,4 +98,3 @@
 		},
 	}
 </script>
-/Users/macbook13/LIBRA_09.02.2018/08.02.2018/client/components/orderedBooks.vue
