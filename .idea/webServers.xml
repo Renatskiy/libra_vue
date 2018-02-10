@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fc3825f2-7dcf-4b27-a557-c7b2779db71e" name="KiaDev" url="http://93.174.130.48">
+        <fileTransfer host="93.174.130.48" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="4e496793-657d-474c-a065-6a2036122618" name="IBS" url="http://Ibs.idefa.ru">
+        <fileTransfer host="Ibs.idefa.ru" port="22" rootFolder="/home/ibs" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="efc6f2ec-e26e-4555-bcef-f675a952fab8" name="ArenaD" url="http://ssh.arenadatat.nichost.ru">
+        <fileTransfer host="ssh.arenadatat.nichost.ru" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
