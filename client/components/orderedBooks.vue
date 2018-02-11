@@ -1,20 +1,29 @@
 <template>
 <div>
 <div>
-  <div style="cursor: pointer;" class="media box" v-for='(man, index) in people()' @click='show(index)'>
+  <div style="cursor: pointer;" class="media box" v-for='(user) in Users'  @click='show(index)'>
       <!--showBookForReturn(index)-->
+      <!--v-for="book in booksForShow()"-->
     <div class="media-content">
             <div class="content">
               <p>
-                <strong class="title">{{ man.name }}</strong>
+                <strong class="title">{{ user.name }}</strong>
                 <br>
-                <small>{{ man.lastName }}</small>
+                <small>{{ user.login }}</small>
                 <br>
-                <small>Дата бронирования: {{ man.date }}</small>
+
+                  <small>{{ user.useBooksId }}</small>
+                  <br>
+
+
+
+                <div class="media" v-for="(book) in books">
+                <small>Книги в пользовании {{ bookIn.title }}</small>
+                </div>
 
                 <br>
               </p>
-              <strong class="title">{{ man.book }} {{ man.orderBook }}</strong>
+              <!--<strong class="title">{{ book.title  }} </strong>-->
             </div>
             <returnBookButton/>
         </div>
@@ -32,6 +41,7 @@ import {mapActions, mapState, mapMutations} from 'vuex';
   import books from 'store/books.js'
   import persone from 'store/persone.js';
   import orderBook from 'store/persone.js';
+  import Users from 'store/users.js';
   import returnBookButton from 'components/returnBookButton';
   import returnBookModal from 'components/returnBookModal'
 
@@ -44,25 +54,62 @@ import {mapActions, mapState, mapMutations} from 'vuex';
       return {
           persone,
           books,
+          Users,
+          actualBook: 2,
 
         }
       },
-    mounted(){
-      // console.log(persone[0]);
-    },
-    methods: {
-      people(){
-        return JSON.parse(localStorage.getItem('this.persone', persone));
+    mounted() {
 
+            var arBook = [];
+            var arUser = [];
+        for(const itemBook of books){
+            arBook.push(itemBook.bookId)
+
+        }
+            console.log(arBook)
+
+            for(const itemUser of Users){
+                arUser.push(itemUser.useBooksId)
+            }
+        console.log(arUser)
         },
+
+
+
+
+      computed: {
+          bookIn: function () {
+              return books[this.actualBook]
+          }
+      },
+    methods: {
+        booksForShow: function () {
+//
+//            var arr = [];
+//                var user
+//                for(user of Users){
+//
+//                }
+//
+//            const activeUserBooks = this.Users.useBooksId;
+//            for(const bookItem of activeUserBooks){
+//
+//                const book = books.filter(b =>{
+//                    return b.bookId === bookItem
+//
+//                });
+//                arr.push(...book);
+//                // console.log(...book)
+//            };
+//            console.log(arr[1].title)
+//            return arr
+//        }
+        },
+
+
         show: function(index) {
             this.showModalReturn(index);
-          // console.log(this.people()[index]);
-
-            let returnBook = this.people()[index];
-            var returnedBook = JSON.stringify(returnBook)
-            localStorage.setItem('book', returnedBook);
-
 
         },
         ...mapMutations({

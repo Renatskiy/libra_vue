@@ -4,9 +4,10 @@
       <div class="field">
       <label class="label">Заполните ФИО</label>
       <p class="control has-icons-left has-icons-right">
-        <input class="input" type="text" placeholder="name" v-model='input.name'>
-        <input class="input" type="text" placeholder="lastName" v-model='input.lastName'>
-        <input class="input" type="text" placeholder="date" v-model='input.date'>
+
+        <input class="input" type="text" placeholder="login" v-model="activeUser.login">
+        <!--<input class="input" type="text" placeholder="lastName" v-model='input.lastName'>-->
+        <input class="input" type="text" placeholder="Дата" v-model='input.date'>
         <span class="icon is-small is-left">
           <i class="fa fa-book"></i>
         </span>
@@ -30,6 +31,8 @@
   import books from 'store/books.js'
   import persone from 'store/persone.js';
   import orderBook from 'store/persone.js';
+  import Users from 'store/users.js';
+  import activeUser from 'store/activeUser.js';
 
   export default{
     data: function(name, lastName, date){
@@ -41,7 +44,8 @@
           lastName: '',
           date: this.addDate(),
         },
-
+          Users,
+          activeUser,
       }
     },
     mounted(){
@@ -49,15 +53,23 @@
     },
     methods: {
       edit: function(name, lastName, book ){
+
+//          console.log(selectedBook)
+
+
         let z = localStorage.getItem('selectedBook');
         let bookItem = JSON.parse(z)
 
-          var newPersone = {name: this.input.name, lastName: this.input.lastName, date:this.addDate(), book: bookItem};
-            this.persone.push(newPersone);
-            console.log(newPersone);
+          activeUser.useBooksId.push(bookItem)
+          console.log(activeUser.useBooksId);
 
-            var persone = JSON.stringify(this.persone)
-            localStorage.setItem('this.persone', persone);
+//          var newPersone = {name: this.input.name, lastName: this.input.lastName, date:this.addDate(), book: bookItem};
+//            this.persone.push(newPersone);
+//            console.log(bookItem);
+//
+//            var persone = JSON.stringify(this.persone)
+//            localStorage.setItem('this.persone', persone);
+          this.closeWindow();
       },
         ...mapMutations({
             closeWindow: 'TAKE_MODAL_TOGGLE'
