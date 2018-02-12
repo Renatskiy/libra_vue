@@ -115,6 +115,8 @@
 	import books from 'store/books.js';
 	import orderBook from 'store/persone.js'
 	import persone from 'store/persone.js';
+	import Users from 'store/users.js';
+	import activeUser from 'store/activeUser.js';
 	//import test from 'store/test.js';
 
 	export default {
@@ -142,13 +144,13 @@
 
 				click: function(selectedBook){
 						this.show();
-						console.log(selectedBook.title)
+//						console.log(selectedBook.bookId);
+//						console.log(activeUser.useBooksId)
 
-						var thisBook = JSON.stringify(selectedBook.title)
+						var thisBook = JSON.stringify(selectedBook.bookId)
 						localStorage.setItem('selectedBook', thisBook);
-						
+
 						var x = localStorage.getItem('selectedBook')
-						console.log(x);
 
 					},
 					showBook: function(index){

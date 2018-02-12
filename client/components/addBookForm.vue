@@ -65,16 +65,16 @@
 
 	export default {
 		mounted() {
-			console.log('addBookForm');
+//			console.log('addBookForm');
 		},
 		methods:{
 			edit: function(title, descr, author, img){
 
 				var newBook = {title: this.input.title, descr: this.input.descr, author: this.input.author, img: this.input.img};
-				console.log(newBook);
+//				console.log(newBook);
 
 				this.books.push(newBook);
-                console.log(newBook);
+                console.log(books);
 
 			},
             ...mapMutations({
@@ -98,4 +98,3 @@
 		},
 	}
 </script>
-/Users/macbook13/LIBRA_09.02.2018/08.02.2018/client/components/orderedBooks.vue

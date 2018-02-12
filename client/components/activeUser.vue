@@ -31,7 +31,6 @@
                     for(const bookItem of activeUserBooks){
 
                         const book = books.filter(b =>{
-                            console.log(activeUserBooks)
                             return b.bookId === bookItem
 
                         });

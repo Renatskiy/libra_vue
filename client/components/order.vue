@@ -15,6 +15,7 @@
   import {mapActions, mapState, mapMutations} from 'vuex';
   import persone from 'store/persone.js';
   import books from 'store/books.js';
+  import Users from 'store/users.js';
 
   export default {
     data() {
@@ -23,26 +24,16 @@
         persone,
       }
     },
-    // computed: mapState([
-    //      'books'
-    //    ]),
+
     mounted() {
       this.$nextTick(function(){
-        // setTimeout(() => {
-      //  this.name = 'Test';
-      //  this.addBook( 'New book' )
-      // }, 300)
+
       console.log("nextTick")
       })
       
     },
     methods: {
-      // create(title){
 
-      // },
-      // ...mapActions([
-      //  'addBook'
-      // ])
     },
   } 
 </script>

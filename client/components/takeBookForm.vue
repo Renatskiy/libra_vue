@@ -4,9 +4,10 @@
       <div class="field">
       <label class="label">Заполните ФИО</label>
       <p class="control has-icons-left has-icons-right">
-        <input class="input" type="text" placeholder="name" v-model='input.name'>
-        <input class="input" type="text" placeholder="lastName" v-model='input.lastName'>
-        <input class="input" type="text" placeholder="date" v-model='input.date'>
+
+        <input class="input" type="text" placeholder="login" v-model="activeUser.login">
+        <!--<input class="input" type="text" placeholder="lastName" v-model='input.lastName'>-->
+        <input class="input" type="text" placeholder="Дата" v-model='input.date'>
         <span class="icon is-small is-left">
           <i class="fa fa-book"></i>
         </span>
@@ -30,6 +31,8 @@
   import books from 'store/books.js'
   import persone from 'store/persone.js';
   import orderBook from 'store/persone.js';
+  import Users from 'store/users.js';
+  import activeUser from 'store/activeUser.js';
 
   export default{
     data: function(name, lastName, date){
@@ -41,7 +44,8 @@
           lastName: '',
           date: this.addDate(),
         },
-
+          Users,
+          activeUser,
       }
     },
     mounted(){
@@ -50,14 +54,20 @@
     methods: {
       edit: function(name, lastName, book ){
         let z = localStorage.getItem('selectedBook');
-        let bookItem = JSON.parse(z)
+        let bookItem = JSON.parse(z);
 
-          var newPersone = {name: this.input.name, lastName: this.input.lastName, date:this.addDate(), book: bookItem};
-            this.persone.push(newPersone);
-            console.log(newPersone);
+          for(const item in activeUser.useBooksId) {
+//              console.log(ite
+                  if (item == bookItem) {
+                      alert('Еще одну??? Может первую сдашь сначала?');
+                      this.closeWindow();
+                      return false;
+                  }
 
-            var persone = JSON.stringify(this.persone)
-            localStorage.setItem('this.persone', persone);
+              }
+//          console.log('error')
+          activeUser.useBooksId.push(bookItem);
+          this.closeWindow();
       },
         ...mapMutations({
             closeWindow: 'TAKE_MODAL_TOGGLE'
