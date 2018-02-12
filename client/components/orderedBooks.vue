@@ -49,25 +49,15 @@ import {mapActions, mapState, mapMutations} from 'vuex';
           persone,
           books,
           Users,
-          actualBook: 2,
-
         }
       },
     mounted() {
-
-
-
         },
-
-
-
-
-      computed: {
-
-
-      },
+          computed: {
+          },
     methods: {
                 showBookForUser: function (user) {
+                    console.log(Users)
                   let userBooks = user.useBooksId;
                   let allBooks = this.books;
                   let arr = [];

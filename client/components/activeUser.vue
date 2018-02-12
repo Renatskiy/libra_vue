@@ -37,7 +37,7 @@
                         arr.push(...book);
                         // console.log(...book)
                     };
-                    console.log(arr[1].title)
+                    // console.log(arr[1].title)
                 return arr
             }
         }

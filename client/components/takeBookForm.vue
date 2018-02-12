@@ -67,6 +67,19 @@
 
               if(result.length == 0){
                   activeUser.useBooksId.push(bookItem);
+                  console.log(Users)
+                  // for(let user of Users){
+                  //     let userBooks = user.useBooksId;
+                  //     let takeBook = bookItem;
+                  //     if(userBooks.includes(takeBook)){
+                  //         // userBooks.push(bookItem)
+                  //         console.log(Users)
+                  //           return false;
+                  //
+                  //     }
+                  // }
+
+                  // this.user.useBooksId.push(bookItem);
               }else{
                   alert('Еще одну???');
               }
