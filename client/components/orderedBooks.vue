@@ -10,20 +10,14 @@
                 <strong class="title">{{ user.name }}</strong>
                 <br>
                 <small>{{ user.login }}</small>
-                <br>
+                <br><small>Книги в пользовании :</small>
 
-                  <small>{{ user.useBooksId }}</small>
-                  <br>
-
-
-
-                <div class="media" v-for="(book) in books">
-                <small>Книги в пользовании {{ bookIn.title }}</small>
+                <div class="media" v-for="(book) in  showBookForUser(user) ">
+                 <small>{{book.title}}</small>
                 </div>
 
                 <br>
               </p>
-              <!--<strong class="title">{{ book.title  }} </strong>-->
             </div>
             <returnBookButton/>
         </div>
@@ -61,15 +55,7 @@ import {mapActions, mapState, mapMutations} from 'vuex';
       },
     mounted() {
 
-        const br = function () {
-            for(const itemUser of Users){
-                for(const i in books){
-                    let userBooks = itemUser.useBooksId
-                        console.log(userBooks[i])
-                }
-            }
-         };
-         console.log(br());
+
 
         },
 
@@ -77,15 +63,22 @@ import {mapActions, mapState, mapMutations} from 'vuex';
 
 
       computed: {
-          bookIn: function () {
-              return books[this.actualBook]
-          }
+
+
       },
     methods: {
-        booksForShow: function () {
-//
-//
-        },
+                showBookForUser: function (user) {
+                  let userBooks = user.useBooksId;
+                  let allBooks = this.books;
+                  let arr = [];
+                  for(let book of allBooks){
+                      const {bookId} = book;
+                      if(userBooks.includes(bookId)){
+                          arr.push(book);
+
+                      }
+                  }return arr;
+                },
 
 
         show: function(index) {

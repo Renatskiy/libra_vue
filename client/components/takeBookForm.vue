@@ -52,22 +52,28 @@
       // console.log('takeBookForm');
     },
     methods: {
+
+
+
       edit: function(name, lastName, book ){
         let z = localStorage.getItem('selectedBook');
         let bookItem = JSON.parse(z);
+        let close = this.closeWindow();
 
-          for(const item in activeUser.useBooksId) {
-//              console.log(ite
-                  if (item == bookItem) {
-                      alert('Еще одну??? Может первую сдашь сначала?');
-                      this.closeWindow();
-                      return false;
-                  }
+        var act = new Promise(function (resolve, reject) {
+            resolve(activeUser.useBooksId.filter(i=>bookItem == i))
+        })
+          act.then(function (result) {
 
+              if(result.length == 0){
+                  activeUser.useBooksId.push(bookItem);
+              }else{
+                  alert('Еще одну???');
               }
-//          console.log('error')
-          activeUser.useBooksId.push(bookItem);
-          this.closeWindow();
+              close;
+          })
+
+
       },
         ...mapMutations({
             closeWindow: 'TAKE_MODAL_TOGGLE'
