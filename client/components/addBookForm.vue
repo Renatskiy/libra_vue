@@ -37,8 +37,6 @@
 
 		<div class="field">
 		  <label class="label">Описание</label>
-		  <!-- <div>{{ test }}</div> -->
-		    <!-- <input class="input" type="text" placeholder="" v-model='test.test'> -->
 
 		  <div class="control">
 		    <textarea class="textarea" v-model='input.descr' placeholder="Введите здесь краткое описание книги"></textarea>
@@ -59,13 +57,14 @@
 <script>
 	import addBookModal from 'components/addBookModal'
 	import books from 'store/books.js';
+	import activeUser from 'store/activeUser.js';
     import {mapActions, mapState, mapMutations} from 'vuex';
 
     //import test from 'store/test.js'
 
 	export default {
 		mounted() {
-//			console.log('addBookForm');
+			console.log(activeUser);
 		},
 		methods:{
 			edit: function(title, descr, author, img){
