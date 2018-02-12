@@ -26,6 +26,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="d5ae2656-c9ea-4e6e-9ec5-e0595c44104e" name="Vnukovo" url="http://vnukovo.idefa.ru">
+        <fileTransfer host="vnukovo.idefa.ru" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

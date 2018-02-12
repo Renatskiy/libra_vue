@@ -3,7 +3,6 @@
 </template> 
 
 <script>
-	// import addBookModal from 'components/addBookModal'
 	import {mapActions, mapState, mapMutations} from 'vuex';
 	export default {
 		mounted() {

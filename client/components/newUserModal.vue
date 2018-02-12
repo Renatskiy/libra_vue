@@ -1,33 +1,33 @@
 <template>
-    <div class="modal is-active" v-if="autorizationModal_visible">
+    <div class="modal is-active" v-if="new_user_modal">
         <div class="modal-background"></div>
         <div class="modal-content">
             <div class="box">
-                <autorizationForm/>
+                <newUserForm/>
             </div>
         </div>
-        <button class="modal-close is-large" aria-label="close" @click='AUTORIZATION_MODAL'></button>
+        <button class="modal-close is-large" aria-label="close" @click='NEW_USER_MODAL'></button>
     </div>
 </template>
 
 <script>
 
-    import autorizationForm from 'components/autorizationForm'
+    import newUserForm from 'components/newUserForm'
     import {mapState, mapActions, mapMutations} from 'vuex';
     export default {
         mounted() {
 
         },
         computed: mapState([
-            'autorizationModal_visible'
+            'new_user_modal'
         ]),
         components: {
-            autorizationForm
+            newUserForm,
         },
 
         methods: {
             ...mapMutations([
-                'AUTORIZATION_MODAL'
+                'NEW_USER_MODAL'
             ])
         }
 

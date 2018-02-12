@@ -11,6 +11,7 @@
 	          </h2>
 				<autorizationButton></autorizationButton>
 	          	<addBookButton></addBookButton>
+				<newUserButton/>
 				<activeUser/>
 	        </div>
 	      </div>
@@ -18,6 +19,7 @@
 	    <books></books>
 	    <addBookModal></addBookModal>
 		<autorizationModal/>
+		<newUserModal/>
 		<!--<autorizationModal/>-->
 
 	    <takeBookModal/>
@@ -38,6 +40,9 @@ import orderedBooks from 'components/orderedBooks'
 import autorizationButton from 'components/autorizationButton'
 import autorizationModal from 'components/autorizationModal'
 import activeUser from 'components/activeUser'
+import newUserButton from 'components/newUserButton'
+import newUserModal from 'components/newUserModal'
+import newUserForm from 'components/newUserForm'
 
 // import returnBookButton from 'components/returnBookButton'
 
@@ -55,7 +60,10 @@ export default {
     orderedBooks,
   	autorizationButton,
       autorizationModal,
-      activeUser
+      activeUser,
+      newUserButton,
+      newUserModal,
+      newUserForm
     
   }
 }

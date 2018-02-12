@@ -10,6 +10,7 @@ const state = {
   is_take_modal_open: false,
   is_return_open: false,
   autorizationModal_visible: false,
+  new_user_modal: false,
        
 }
 
@@ -28,6 +29,9 @@ const mutations = {
   },
     AUTORIZATION_MODAL(state) {
     state.autorizationModal_visible = !state.autorizationModal_visible;
+    },
+    NEW_USER_MODAL(state) {
+    state.new_user_modal  = !state.new_user_modal;
     },
 
 }
