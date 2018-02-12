@@ -53,22 +53,20 @@
     },
     methods: {
       edit: function(name, lastName, book ){
-
-//          console.log(selectedBook)
-
-
         let z = localStorage.getItem('selectedBook');
-        let bookItem = JSON.parse(z)
+        let bookItem = JSON.parse(z);
 
-          activeUser.useBooksId.push(bookItem)
-          console.log(activeUser.useBooksId);
+          for(const item in activeUser.useBooksId) {
+//              console.log(ite
+                  if (item == bookItem) {
+                      alert('Еще одну??? Может первую сдашь сначала?');
+                      this.closeWindow();
+                      return false;
+                  }
 
-//          var newPersone = {name: this.input.name, lastName: this.input.lastName, date:this.addDate(), book: bookItem};
-//            this.persone.push(newPersone);
-//            console.log(bookItem);
-//
-//            var persone = JSON.stringify(this.persone)
-//            localStorage.setItem('this.persone', persone);
+              }
+//          console.log('error')
+          activeUser.useBooksId.push(bookItem);
           this.closeWindow();
       },
         ...mapMutations({

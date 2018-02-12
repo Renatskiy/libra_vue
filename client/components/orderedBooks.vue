@@ -61,18 +61,16 @@ import {mapActions, mapState, mapMutations} from 'vuex';
       },
     mounted() {
 
-            var arBook = [];
-            var arUser = [];
-        for(const itemBook of books){
-            arBook.push(itemBook.bookId)
-
-        }
-            console.log(arBook)
-
+        const br = function () {
             for(const itemUser of Users){
-                arUser.push(itemUser.useBooksId)
+                for(const i in books){
+                    let userBooks = itemUser.useBooksId
+                        console.log(userBooks[i])
+                }
             }
-        console.log(arUser)
+         };
+         console.log(br());
+
         },
 
 
@@ -86,25 +84,7 @@ import {mapActions, mapState, mapMutations} from 'vuex';
     methods: {
         booksForShow: function () {
 //
-//            var arr = [];
-//                var user
-//                for(user of Users){
 //
-//                }
-//
-//            const activeUserBooks = this.Users.useBooksId;
-//            for(const bookItem of activeUserBooks){
-//
-//                const book = books.filter(b =>{
-//                    return b.bookId === bookItem
-//
-//                });
-//                arr.push(...book);
-//                // console.log(...book)
-//            };
-//            console.log(arr[1].title)
-//            return arr
-//        }
         },
 
 

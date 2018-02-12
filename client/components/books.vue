@@ -144,8 +144,8 @@
 
 				click: function(selectedBook){
 						this.show();
-						console.log(selectedBook.bookId);
-						console.log(activeUser.useBooksId)
+//						console.log(selectedBook.bookId);
+//						console.log(activeUser.useBooksId)
 
 						var thisBook = JSON.stringify(selectedBook.bookId)
 						localStorage.setItem('selectedBook', thisBook);
