@@ -16,7 +16,7 @@
 
     <div class="field is-grouped">
       <div class="control">
-        <div class="button is-link" @click='edit'>Take</div>
+        <div class="button is-link" @click='edit'>Взять</div>
       </div>
       <div class="control">
         <button class="button is-text" @click="close">Отменить</button>
@@ -55,36 +55,30 @@
 
 
 
-      edit: function(name, lastName, book ){
-        let z = localStorage.getItem('selectedBook');
-        let bookItem = JSON.parse(z);
-        let close = this.closeWindow();
+      edit: function(name, lastName, book ) {
+          let z = localStorage.getItem('selectedBook');
+          let bookItem = JSON.parse(z);
+          let close = this.closeWindow();
 
-        var act = new Promise(function (resolve, reject) {
-            resolve(activeUser.useBooksId.filter(i=>bookItem == i))
-        })
-          act.then(function (result) {
 
-              if(result.length == 0){
+          if (activeUser.login.length > 0) {
+              var act = new Promise(function (resolve, reject) {
+                  resolve(activeUser.useBooksId.filter(i => bookItem == i))
+              })
+              act.then(function (result) {
+
+              if (result.length == 0) {
                   activeUser.useBooksId.push(bookItem);
-                  console.log(Users)
-                  // for(let user of Users){
-                  //     let userBooks = user.useBooksId;
-                  //     let takeBook = bookItem;
-                  //     if(userBooks.includes(takeBook)){
-                  //         // userBooks.push(bookItem)
-                  //         console.log(Users)
-                  //           return false;
-                  //
-                  //     }
-                  // }
 
-                  // this.user.useBooksId.push(bookItem);
-              }else{
+              } else {
                   alert('Еще одну???');
               }
               close;
           })
+      }else{
+              alert('сначала залогинься')
+              return false
+          }
 
 
       },

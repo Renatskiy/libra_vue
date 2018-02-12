@@ -47,11 +47,12 @@
         },
         methods:{
             enterSystem: function(){
-                    const {login, password} = this.user;
-                    if (login && password) {
-
+                        const login = this.user.login
+                const password = this.user.password
+                // const {login, password} = this.user; или можно так
+                if (login && password) {
                         const Found = Users.filter(user => {
-                            console.log(user);
+
                                     return (user.login === login &&
                                         user.password === password
 
@@ -59,7 +60,6 @@
                         });
                         if(Found.length === 1){
                             Object.assign(activeUser, Found[0])
-                            console.log(activeUser)
                             this.closeModal();
                                 return true;
                         }
@@ -78,8 +78,6 @@
             return{
                 //test,
                 user: {
-                    // name: '',
-                    // lastName: '',
                     login: '',
                     password: '',
                     useBooksId: '',

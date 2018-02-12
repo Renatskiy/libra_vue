@@ -76,7 +76,6 @@
                 newUser.lastName = this.user.lastName;
                 newUser.useBooksId = [];
                 Users.push(newUser)
-                console.log(Users);
                 this.closeModal();
             }
         },

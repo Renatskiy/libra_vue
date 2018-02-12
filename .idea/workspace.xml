@@ -3,12 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="3b39ea6e-11d3-45a7-8dc9-a4fa10bd4851" name="Default" comment="">
       <change beforePath="" afterPath="$PROJECT_DIR$/client/components/newUserButton.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/client/components/newUserForm.vue" />
       <change beforePath="" afterPath="$PROJECT_DIR$/client/components/newUserModal.vue" />
       <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
       <change beforePath="$PROJECT_DIR$/client/components/addBookButton.vue" afterPath="$PROJECT_DIR$/client/components/addBookButton.vue" />
+      <change beforePath="$PROJECT_DIR$/client/components/addBookForm.vue" afterPath="$PROJECT_DIR$/client/components/addBookForm.vue" />
       <change beforePath="$PROJECT_DIR$/client/components/autorizationForm.vue" afterPath="$PROJECT_DIR$/client/components/autorizationForm.vue" />
       <change beforePath="$PROJECT_DIR$/client/components/autorizationModal.vue" afterPath="$PROJECT_DIR$/client/components/autorizationModal.vue" />
+      <change beforePath="$PROJECT_DIR$/client/components/newUserForm.vue" afterPath="$PROJECT_DIR$/client/components/newUserForm.vue" />
+      <change beforePath="$PROJECT_DIR$/client/components/takeBookForm.vue" afterPath="$PROJECT_DIR$/client/components/takeBookForm.vue" />
       <change beforePath="$PROJECT_DIR$/client/store/index.js" afterPath="$PROJECT_DIR$/client/store/index.js" />
       <change beforePath="$PROJECT_DIR$/client/store/users.js" afterPath="$PROJECT_DIR$/client/store/users.js" />
       <change beforePath="$PROJECT_DIR$/client/views/Home.vue" afterPath="$PROJECT_DIR$/client/views/Home.vue" />
@@ -59,25 +61,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newUserModal.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/components/newUserModal.vue">
+      <file leaf-file-name="autorizationForm.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/autorizationForm.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="30" column="14" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="14" />
+            <state relative-caret-position="158">
+              <caret line="49" column="53" lean-forward="true" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
               <folding>
-                <element signature="e#379#427#0" expanded="true" />
+                <element signature="e#1262#1318#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autorizationForm.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/components/autorizationForm.vue">
+      <file leaf-file-name="takeBookForm.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/components/takeBookForm.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="57" column="29" lean-forward="true" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+            <state relative-caret-position="139">
+              <caret line="63" column="14" lean-forward="true" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="30" />
               <folding>
-                <element signature="e#1262#1318#0" expanded="true" />
+                <element signature="e#901#935#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,8 +88,8 @@
       <file leaf-file-name="activeUser.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/store/activeUser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -106,8 +108,8 @@
       <file leaf-file-name="newUserForm.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/components/newUserForm.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+            <state relative-caret-position="295">
+              <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
               <folding>
                 <element signature="e#1959#2015#0" expanded="true" />
               </folding>
@@ -115,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/store/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="36">
+              <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -198,14 +200,12 @@
         <option value="&lt;efc6f2ec-e26e-4555-bcef-f675a952fab8&gt;/home/arenadatat/arenadata.tech/docs/local/templates/main/style/include/news.less" />
         <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/home/ibs/dev-design/eng/media/index.php" />
         <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/media/media_office/index.php" />
-        <option value="$PROJECT_DIR$/client/components/addBookForm.vue" />
         <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/bitrix/templates/ibs_new_texterra/header.php" />
         <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/bitrix/templates/.default/components/defa/controller/divisions_new/bitrix/news.list/product.project/template.php" />
         <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/bitrix/templates/ibs_new_texterra/css/swiper.css" />
         <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/bitrix/templates/ibs_new_texterra/js/scripts.js" />
         <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/bitrix/templates/ibs_new_texterra/css/style.css" />
         <option value="$PROJECT_DIR$/client/components/activeUser.vue" />
-        <option value="$PROJECT_DIR$/client/components/takeBookForm.vue" />
         <option value="$PROJECT_DIR$/client/components/orderedBooks.vue" />
         <option value="&lt;d5ae2656-c9ea-4e6e-9ec5-e0595c44104e&gt;/home/vnukovo/dev_new/pass/bitrix/templates/.default/css/styles.less" />
         <option value="$PROJECT_DIR$/client/components/autorisationButton.vue" />
@@ -215,9 +215,11 @@
         <option value="$PROJECT_DIR$/client/components/newUserButton.vue" />
         <option value="$PROJECT_DIR$/client/components/newUserModal.vue" />
         <option value="$PROJECT_DIR$/client/views/Home.vue" />
-        <option value="$PROJECT_DIR$/client/components/newUserForm.vue" />
-        <option value="$PROJECT_DIR$/client/components/autorizationForm.vue" />
         <option value="$PROJECT_DIR$/client/store/users.js" />
+        <option value="$PROJECT_DIR$/client/components/newUserForm.vue" />
+        <option value="$PROJECT_DIR$/client/components/addBookForm.vue" />
+        <option value="$PROJECT_DIR$/client/components/autorizationForm.vue" />
+        <option value="$PROJECT_DIR$/client/components/takeBookForm.vue" />
       </list>
     </option>
   </component>
@@ -344,7 +346,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214517000" />
+    <option name="totallyTimeSpent" value="217452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1921" y="23" width="1921" height="988" extended-state="0" />
@@ -543,14 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/addBookForm.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="76" column="37" lean-forward="false" selection-start-line="76" selection-start-column="37" selection-end-line="76" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/components/books.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1630">
@@ -571,14 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/takeBookForm.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -617,11 +603,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/autorizationButton.vue">
+    <entry file="file://$PROJECT_DIR$/client/views/Home.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="38" />
+        <state relative-caret-position="414">
+          <caret line="65" column="17" lean-forward="false" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+          <folding>
+            <element signature="e#725#761#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="32" column="4" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/store/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/newUserModal.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="14" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="14" />
+          <folding>
+            <element signature="e#379#427#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/newUserForm.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="72" column="48" lean-forward="true" selection-start-line="72" selection-start-column="48" selection-end-line="72" selection-end-column="48" />
+          <folding>
+            <element signature="e#1959#2015#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/addBookForm.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="76" column="21" lean-forward="false" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/autorizationForm.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="49" column="53" lean-forward="true" selection-start-line="49" selection-start-column="53" selection-end-line="49" selection-end-column="53" />
+          <folding>
+            <element signature="e#1262#1318#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -635,67 +677,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/views/Home.vue">
+    <entry file="file://$PROJECT_DIR$/client/components/autorizationButton.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="65" column="17" lean-forward="false" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
-          <folding>
-            <element signature="e#725#761#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/newUserModal.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="30" column="14" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="30" selection-end-column="14" />
-          <folding>
-            <element signature="e#379#427#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="32" column="4" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="18" />
+        <state relative-caret-position="162">
+          <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/newUserForm.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
-          <folding>
-            <element signature="e#1959#2015#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/store/activeUser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="9" />
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/components/autorizationForm.vue">
+    <entry file="file://$PROJECT_DIR$/client/components/takeBookForm.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="57" column="29" lean-forward="true" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+        <state relative-caret-position="139">
+          <caret line="63" column="14" lean-forward="true" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="30" />
           <folding>
-            <element signature="e#1262#1318#0" expanded="true" />
+            <element signature="e#901#935#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/store/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
