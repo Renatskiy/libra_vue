@@ -5,7 +5,8 @@
       <label class="label">Заполните ФИО</label>
       <p class="control has-icons-left has-icons-right">
 
-        <input class="input" type="text" placeholder="login" v-model="activeUser.login">
+        <div class="input"  v-if="activeUser.login">{{ activeUser.login }}</div>
+        <div class="input"  v-else>Пользователь не авторизован</div>
         <!--<input class="input" type="text" placeholder="lastName" v-model='input.lastName'>-->
         <input class="input" type="text" placeholder="Дата" v-model='input.date'>
         <span class="icon is-small is-left">
@@ -82,6 +83,12 @@
 
 
       },
+
+        active: function () {
+            if(activeUser.login.length > 0){
+                return true
+            }
+        },
         ...mapMutations({
             closeWindow: 'TAKE_MODAL_TOGGLE'
         }),

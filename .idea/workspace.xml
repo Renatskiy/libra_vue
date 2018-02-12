@@ -76,10 +76,10 @@
       <file leaf-file-name="takeBookForm.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/components/takeBookForm.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="63" column="14" lean-forward="true" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="30" />
+            <state relative-caret-position="126">
+              <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="65" />
               <folding>
-                <element signature="e#901#935#0" expanded="true" />
+                <element signature="e#962#996#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,7 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.news-title__news-title-title--color</find>
       <find>menu__logo</find>
       <find>inUse</find>
       <find>bookId</find>
@@ -161,6 +160,7 @@
       <find>top: 3px;</find>
       <find>even</find>
       <find>schedule-table-inner season-flight</find>
+      <find>active</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -346,7 +346,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="217452000" />
+    <option name="totallyTimeSpent" value="218808000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1921" y="23" width="1921" height="988" extended-state="0" />
@@ -695,10 +695,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/takeBookForm.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="63" column="14" lean-forward="true" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="30" />
+        <state relative-caret-position="126">
+          <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="65" />
           <folding>
-            <element signature="e#901#935#0" expanded="true" />
+            <element signature="e#962#996#0" expanded="true" />
           </folding>
         </state>
       </provider>
