@@ -21,6 +21,8 @@
  </script>
 <style>
     .button.is-small.autorisButton{
-        position: relative;
+        position: absolute;
+        top: 0px;
+        right: 80px;
     }
 </style>

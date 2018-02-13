@@ -1,17 +1,22 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createMutationsSharer from 'vuex-shared-mutations'
+import activeUser from './activeUserStore.js'
 
 Vue.use(Vuex)
 
+
+
 const state = {
   count: 0,
-  //books: [],
+
   isModalVisible: false,
   is_take_modal_open: false,
   is_return_open: false,
   autorizationModal_visible: false,
   new_user_modal: false,
-       
+
+    plugins: [createMutationsSharer({ predicate: ['CHANGE_USER_STATE', 'mutation2'] })],
 }
 
 const mutations = {
@@ -49,7 +54,8 @@ const actions = {
 const store = new Vuex.Store({
   state,
   mutations,
-  actions
+  actions,
+    modules: {activeUser},
 })
 
 export default store

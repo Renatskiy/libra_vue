@@ -70,6 +70,9 @@
 
               if (result.length == 0) {
                   activeUser.useBooksId.push(bookItem);
+                    var checkBookCount = (x,y)=>x.filter(i=> y.indexOf(i)> -1)
+
+
 
               } else {
                   alert('Еще одну???');

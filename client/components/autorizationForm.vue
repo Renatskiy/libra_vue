@@ -27,7 +27,7 @@
 
         <div class="field is-grouped">
             <div class="control">
-                <div class="button is-link" @click='enterSystem()'>Войти в систему</div>
+                <div class="button is-link" @click='VALID_USER'>Войти в систему</div>
             </div>
             <div class="control">
                 <button class="button is-text" @click="close">Отменить</button>
@@ -37,39 +37,53 @@
 </template>
 
 <script>
-    import {mapActions, mapState, mapMutations} from 'vuex';
+    import {mapActions, mapGetters, mapState, mapMutations} from 'vuex';
     import Users from 'store/users.js'
     import activeUser from 'store/activeUser.js'
+    import activeUserStore from 'store/activeUserStore.js'
+    import createMutationsSharer from 'vuex-shared-mutations'
+
 
 
     export default {
+        computed: {
+            ...mapGetters([
+                'selected_done_task',
+                'login',
+                'password'
+            ])
+        },
         mounted() {
+
+            // console.log(this.selected_done_task)
+            console.log(this.login)
+            // console.log(this.userValid)
         },
         methods:{
-            enterSystem: function(){
-                        const login = this.user.login
-                const password = this.user.password
-                // const {login, password} = this.user; или можно так
-                if (login && password) {
-                        const Found = Users.filter(user => {
-
-                                    return (user.login === login &&
-                                        user.password === password
-
-                            )
-                        });
-                        if(Found.length === 1){
-                            Object.assign(activeUser, Found[0])
-                            this.closeModal();
-                                return true;
-                        }
-
-                    }
-            },
-
+            // enterSystem: function(){
+            //             const login = this.user.login
+            //     const password = this.user.password
+            //     // const {login, password} = this.user; или можно так
+            //     if (login && password) {
+            //             const Found = Users.filter(user => {
+            //
+            //                         return (user.login === login &&
+            //                             user.password === password
+            //
+            //                 )
+            //             });
+            //             if(Found.length === 1){
+            //                 Object.assign(activeUser, Found[0])
+            //                 this.closeModal();
+            //                     return true;
+            //             }
+            //         }
+            // },
             ...mapMutations({
-                closeModal: 'AUTORIZATION_MODAL'
+                closeModal: 'AUTORIZATION_MODAL',
+                VALID_USER: 'VALID_USER',
             }),
+
             close(){
                 this.closeModal();
             },

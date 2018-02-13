@@ -1,4 +1,5 @@
-<template><div>
+<template>
+<div class="login-button">
     <button class="button is-warning is-small addButton" @click='AUTORIZATION_MODAL'>Login</button>
 </div>
 </template>
@@ -24,5 +25,10 @@
 <style>
     .button.is-small{
         position: relative;
+    }
+    .login-button{
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 </style>
