@@ -7,7 +7,7 @@
         <div class="field">
             <label class="label">Логин</label>
             <p class="control has-icons-left has-icons-right">
-                <input class="input" type="text" placeholder="" v-model='user.login'>
+                <input class="input" type="text" placeholder="" v-model='user_login'>
                 <span class="icon is-small is-left">
 		      <i class="fa fa-child"></i>
 		    </span>
@@ -17,7 +17,7 @@
         <div class="field">
             <label class="label">Пароль</label>
             <p class="control has-icons-left has-icons-right">
-                <input class="input" type="text" placeholder="" v-model='user.password'>
+                <input class="input" type="text" placeholder="" v-model='user_password'>
                 <span class="icon is-small is-left">
 		      <i class="fa fa-child"></i>
 		    </span>
@@ -51,7 +51,24 @@
                 'selected_done_task',
                 'login',
                 'password'
-            ])
+            ]),
+            user_login:{
+                get: function () {
+                   return this.login
+                },
+                set: function (e) {
+                    this.SET_LOGIN(e)
+                }
+            },
+            user_password:{
+                get: function () {
+                    console.log(this.password)
+                   return this.password
+                },
+                set: function (e) {
+                    this.SET_PASSWORD(e)
+                },
+            },
         },
         mounted() {
 
@@ -82,6 +99,8 @@
             ...mapMutations({
                 closeModal: 'AUTORIZATION_MODAL',
                 VALID_USER: 'VALID_USER',
+                SET_LOGIN: 'SET_LOGIN',
+                SET_PASSWORD: 'SET_PASSWORD',
             }),
 
             close(){

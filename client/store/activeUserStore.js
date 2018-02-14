@@ -22,8 +22,8 @@ const activeUserStore = {
         // },
         VALID_USER(state) {
             function valid() {
-                console.log(login)
-                console.log(password)
+                console.log(state.login)
+                console.log(state.password)
                 const {login, password} = state;
                 // const {login, password} = this.user; или можно так
 
@@ -44,6 +44,12 @@ const activeUserStore = {
                 }
             }valid();
         },
+        SET_LOGIN(state, login){
+            state.login = login;
+        },
+        SET_PASSWORD(state, password){
+            state.password = password;
+        },
 
     },
     mounted(){
@@ -57,6 +63,8 @@ const activeUserStore = {
         selected_done_task: state => state.done[state.selected_done_task],
         // userValid: state => state.user[state.userValid],
         userValid: state => state.login,
+        login: ({login}) => login,
+        password: ({password}) => password,
     },
     // Асинхронные изменения свойств объекта
     actions:{
