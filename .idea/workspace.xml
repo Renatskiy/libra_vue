@@ -33,10 +33,22 @@
       <file leaf-file-name="activeUserStore.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/store/activeUserStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="46" column="17" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="17" />
+            <state relative-caret-position="244">
+              <caret line="69" column="57" lean-forward="true" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
               <folding>
-                <element signature="e#2#46#0" expanded="true" />
+                <element signature="e#1#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/store/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,12 +57,22 @@
       <file leaf-file-name="autorizationForm.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/components/autorizationForm.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="19" column="86" lean-forward="false" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="86" />
+            <state relative-caret-position="1184">
+              <caret line="114" column="31" lean-forward="false" selection-start-line="114" selection-start-column="21" selection-end-line="114" selection-end-column="31" />
               <folding>
                 <element signature="e#1259#1327#0" expanded="true" />
-                <marker date="1518627060000" expanded="false" signature="2425:3265" ph="..." />
+                <marker date="1518682899000" expanded="false" signature="2477:3317" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template.php" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;33aa8d79-9d62-4263-9ccf-3ad5a678ea77&gt;/home/bitrix/ext_www/design/www/local/components/npflk/product.detail/templates/.default/npflk/block/operations_table/template.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-745">
+              <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="14" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,18 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>offset</find>
-      <find>onLoad</find>
-      <find>lang</find>
-      <find>g-press__share-btn g-press__share-btn--google g</find>
-      <find>js-g-map-display</find>
-      <find>.fancybox-close-small</find>
-      <find>section-menu__item</find>
-      <find>section-info__header</find>
-      <find>section-row__item-wrap</find>
-      <find>header__link-ic-wrap</find>
-      <find>selected_done_task</find>
-      <find>mail</find>
       <find>.header__link-ic-wrap</find>
       <find>.header__search</find>
       <find>.header__menu-toggle-icon</find>
@@ -89,6 +99,18 @@
       <find>search_header</find>
       <find>.section-menu__list</find>
       <find>.menu</find>
+      <find>style</find>
+      <find>dealer__panes</find>
+      <find>SET_PASSWORD</find>
+      <find>closes</find>
+      <find>lc-graphs__graph</find>
+      <find>js_graph</find>
+      <find>email_wrap</find>
+      <find>.index-intro__slide</find>
+      <find>.index-news__slider-btn</find>
+      <find>mail-dgubar-3.png</find>
+      <find>js</find>
+      <find>user_active</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -97,25 +119,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/store/booksInUse.js" />
-        <option value="$PROJECT_DIR$/client/store/activeUser.js" />
-        <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/home/ibs/view/bitrix/templates/ibs_new_texterra/css/style.css" />
-        <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/home/ibs/dev-design/bitrix/templates/ibs_new_texterra/css/style.css" />
-        <option value="&lt;efc6f2ec-e26e-4555-bcef-f675a952fab8&gt;/home/arenadatat/arenadata.tech/docs/local/templates/main/style/include/popup-kons.less" />
-        <option value="&lt;efc6f2ec-e26e-4555-bcef-f675a952fab8&gt;/home/arenadatat/arenadata.tech/docs/local/templates/main/footer.php" />
-        <option value="&lt;efc6f2ec-e26e-4555-bcef-f675a952fab8&gt;/home/arenadatat/arenadata.tech/docs/local/templates/main/style/include/smooth-menu.less" />
         <option value="&lt;efc6f2ec-e26e-4555-bcef-f675a952fab8&gt;/home/arenadatat/arenadata.tech/docs/local/templates/main/style/include/footer.less" />
         <option value="&lt;efc6f2ec-e26e-4555-bcef-f675a952fab8&gt;/home/arenadatat/arenadata.tech/docs/local/templates/main/style/plugins/swiper.less" />
         <option value="&lt;efc6f2ec-e26e-4555-bcef-f675a952fab8&gt;/home/arenadatat/arenadata.tech/docs/local/templates/main/style/include/menu.less" />
         <option value="&lt;efc6f2ec-e26e-4555-bcef-f675a952fab8&gt;/home/arenadatat/arenadata.tech/docs/local/templates/main/style/include/body.less" />
         <option value="&lt;efc6f2ec-e26e-4555-bcef-f675a952fab8&gt;/home/arenadatat/arenadata.tech/docs/local/templates/main/style/include/news.less" />
         <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/home/ibs/dev-design/eng/media/index.php" />
-        <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/media/media_office/index.php" />
         <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/bitrix/templates/ibs_new_texterra/header.php" />
         <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/bitrix/templates/.default/components/defa/controller/divisions_new/bitrix/news.list/product.project/template.php" />
         <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/bitrix/templates/ibs_new_texterra/css/swiper.css" />
         <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/bitrix/templates/ibs_new_texterra/js/scripts.js" />
-        <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/bitrix/templates/ibs_new_texterra/css/style.css" />
         <option value="$PROJECT_DIR$/client/components/activeUser.vue" />
         <option value="$PROJECT_DIR$/client/components/orderedBooks.vue" />
         <option value="&lt;d5ae2656-c9ea-4e6e-9ec5-e0595c44104e&gt;/home/vnukovo/dev_new/pass/bitrix/templates/.default/css/styles.less" />
@@ -130,7 +143,6 @@
         <option value="$PROJECT_DIR$/client/components/newUserButton.vue" />
         <option value="$PROJECT_DIR$/client/store/books.js" />
         <option value="$PROJECT_DIR$/client/components/takeBookForm.vue" />
-        <option value="$PROJECT_DIR$/client/store/index.js" />
         <option value="$PROJECT_DIR$/client/components/addBookButton.vue" />
         <option value="&lt;33aa8d79-9d62-4263-9ccf-3ad5a678ea77&gt;/home/bitrix/ext_www/dev-tihonov.unitile.idefa.ru/local/templates/main/style/plugins/swiper.less" />
         <option value="&lt;33aa8d79-9d62-4263-9ccf-3ad5a678ea77&gt;/home/bitrix/ext_www/dev-tihonov.unitile.idefa.ru/local/templates/main/style/components/swiper-slide.less" />
@@ -146,7 +158,17 @@
         <option value="&lt;33aa8d79-9d62-4263-9ccf-3ad5a678ea77&gt;/home/bitrix/ext_www/dev-tihonov.unitile.idefa.ru/local/templates/main/script/script.js" />
         <option value="&lt;33aa8d79-9d62-4263-9ccf-3ad5a678ea77&gt;/home/bitrix/ext_www/dev-tihonov.unitile.idefa.ru/local/templates/main/style/components/header.less" />
         <option value="&lt;33aa8d79-9d62-4263-9ccf-3ad5a678ea77&gt;/home/bitrix/ext_www/dev-tihonov.unitile.idefa.ru/local/templates/main/icons/sprite.svg" />
+        <option value="&lt;7d32d01a-f347-4bb2-9179-8704e02a0709&gt;/home/bitrix/dev/dev-vorobiev/html/local/templates/.default/components/defa/block/find_dealers/bitrix/news.list/.default/template.php" />
+        <option value="&lt;7d32d01a-f347-4bb2-9179-8704e02a0709&gt;/home/bitrix/dev/dev-vorobiev/html/local/templates/main/css/styles.less" />
+        <option value="$PROJECT_DIR$/client/store/index.js" />
         <option value="$PROJECT_DIR$/client/components/autorizationForm.vue" />
+        <option value="&lt;33aa8d79-9d62-4263-9ccf-3ad5a678ea77&gt;/home/bitrix/ext_www/dev-tihonov.unitile.idefa.ru/local/templates/main/style/components/index-intro.less" />
+        <option value="&lt;33aa8d79-9d62-4263-9ccf-3ad5a678ea77&gt;/home/bitrix/ext_www/dev-tihonov.unitile.idefa.ru/local/templates/main/style/components/index-news.less" />
+        <option value="&lt;33aa8d79-9d62-4263-9ccf-3ad5a678ea77&gt;/home/bitrix/ext_www/design/www/local/components/npflk/product.detail/templates/.default/npflk/block/operations_graph/template.php" />
+        <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/bitrix/templates/ibs_new_texterra/css/style.css" />
+        <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/media/media_office/index.php" />
+        <option value="&lt;4e496793-657d-474c-a065-6a2036122618&gt;/dev-design/eng/media/index.php" />
+        <option value="&lt;33aa8d79-9d62-4263-9ccf-3ad5a678ea77&gt;/home/bitrix/ext_www/design/www/local/components/npflk/product.detail/templates/.default/npflk/block/operations_table/template.php" />
         <option value="$PROJECT_DIR$/client/store/activeUserStore.js" />
       </list>
     </option>
@@ -236,7 +258,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -269,11 +291,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="260511000" />
+    <option name="totallyTimeSpent" value="279983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1921" y="23" width="1921" height="988" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -281,9 +302,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996276" sideWeight="0.5057851" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41321388" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24321447" sideWeight="0.4876033" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24906865" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41321388" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24321447" sideWeight="0.4876033" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24906865" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -628,41 +649,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/autorizationModal.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+        <state relative-caret-position="170">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding>
-            <element signature="e#399#457#0" expanded="false" />
+            <element signature="e#399#457#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/store/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="16" />
+        <state relative-caret-position="286">
+          <caret line="36" column="22" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="22" />
           <folding>
-            <element signature="e#0#21#0" expanded="false" />
+            <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/store/activeUserStore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="46" column="17" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="17" />
+        <state relative-caret-position="244">
+          <caret line="69" column="57" lean-forward="true" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
           <folding>
-            <element signature="e#2#46#0" expanded="true" />
+            <element signature="e#1#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/components/autorizationForm.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="19" column="86" lean-forward="false" selection-start-line="19" selection-start-column="73" selection-end-line="19" selection-end-column="86" />
+        <state relative-caret-position="1184">
+          <caret line="114" column="31" lean-forward="false" selection-start-line="114" selection-start-column="21" selection-end-line="114" selection-end-column="31" />
           <folding>
             <element signature="e#1259#1327#0" expanded="true" />
-            <marker date="1518627060000" expanded="false" signature="2425:3265" ph="..." />
+            <marker date="1518682899000" expanded="false" signature="2477:3317" ph="..." />
           </folding>
         </state>
       </provider>

@@ -7,6 +7,7 @@ Vue.use(Vuex)
 
 
 
+
 const state = {
   count: 0,
 
@@ -18,6 +19,7 @@ const state = {
 
     plugins: [createMutationsSharer({ predicate: ['CHANGE_USER_STATE', 'mutation2'] })],
 }
+
 
 const mutations = {
   ADD_BOOK(state, book) {
@@ -41,13 +43,19 @@ const mutations = {
 
 }
 
+// const actions = {
+//
+//   // setReturnModalVisiblity({commit}, visibleState) {
+//   //   commit('RETURN_MODAL_TOGGLE', visibleState);
+//   // },
+//
+// }
 const actions = {
- 
-  // setReturnModalVisiblity({commit}, visibleState) {
-  //   commit('RETURN_MODAL_TOGGLE', visibleState);
-  // },
-
+    // AUTORIZATION_MODAL({commit}, autorizationModal_visible) {
+    //     commit('VALID_USER', autorizationModal_visible);
+    // }
 }
+
 
 
 

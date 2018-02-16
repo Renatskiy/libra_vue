@@ -55,17 +55,20 @@
             user_login:{
                 get: function () {
                    return this.login
+
                 },
                 set: function (e) {
                     this.SET_LOGIN(e)
+                    // console.log(this.login)
                 }
             },
             user_password:{
                 get: function () {
-                    console.log(this.password)
+                    // console.log(this.password)
                    return this.password
                 },
                 set: function (e) {
+
                     this.SET_PASSWORD(e)
                 },
             },
@@ -101,7 +104,12 @@
                 VALID_USER: 'VALID_USER',
                 SET_LOGIN: 'SET_LOGIN',
                 SET_PASSWORD: 'SET_PASSWORD',
+                MODAL_CLOSE: 'MODAL_CLOSE',
             }),
+            closes() {
+                console.log('sdfsdfsdfsdf')
+                this.$store.dispatch('close_modal','autorizationModal_visible')
+            },
 
             close(){
                 this.closeModal();

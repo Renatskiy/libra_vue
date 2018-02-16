@@ -34,12 +34,12 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
-      <webServer id="33aa8d79-9d62-4263-9ccf-3ad5a678ea77" name="YuniTile" url="http://77.247.241.226">
-        <fileTransfer host="77.247.241.226" port="22118" accessType="SFTP">
+      <webServer id="33aa8d79-9d62-4263-9ccf-3ad5a678ea77" name="NPF" url="http://77.247.241.226">
+        <fileTransfer host="77.247.241.226" port="22126" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
-          <option name="port" value="22118" />
+          <option name="port" value="22126" />
         </fileTransfer>
       </webServer>
       <webServer id="7d32d01a-f347-4bb2-9179-8704e02a0709" name="HaVAL" url="http://93.174.131.19">
