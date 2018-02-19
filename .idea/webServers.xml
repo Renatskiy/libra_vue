@@ -50,6 +50,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="7c450303-0883-47d8-a966-75cb0e9bd274" name="YuniTile" url="http://77.247.241.226">
+        <fileTransfer host="77.247.241.226" port="22118" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22118" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import createMutationsSharer from 'vuex-shared-mutations'
 import activeUser from './activeUserStore.js'
+import bookFilterStore from './bookFilter.js'
 
 Vue.use(Vuex)
 
@@ -10,7 +11,6 @@ Vue.use(Vuex)
 
 const state = {
   count: 0,
-
   isModalVisible: false,
   is_take_modal_open: false,
   is_return_open: false,
@@ -41,19 +41,14 @@ const mutations = {
     state.new_user_modal  = !state.new_user_modal;
     },
 
+
 }
 
-// const actions = {
-//
-//   // setReturnModalVisiblity({commit}, visibleState) {
-//   //   commit('RETURN_MODAL_TOGGLE', visibleState);
-//   // },
-//
-// }
 const actions = {
-    // AUTORIZATION_MODAL({commit}, autorizationModal_visible) {
-    //     commit('VALID_USER', autorizationModal_visible);
-    // }
+
+    close_by_click({commit}){
+        commit('AUTORIZATION_MODAL');
+    },
 }
 
 
@@ -63,7 +58,7 @@ const store = new Vuex.Store({
   state,
   mutations,
   actions,
-    modules: {activeUser},
+    modules: {activeUser, bookFilterStore},
 })
 
 export default store

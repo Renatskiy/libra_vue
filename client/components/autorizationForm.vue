@@ -27,7 +27,9 @@
 
         <div class="field is-grouped">
             <div class="control">
-                <div class="button is-link" @click='VALID_USER'>Войти в систему</div>
+                <div class="check_wrapper" @click="close_by_click">
+                <div class="button is-link" @click='check()'>Войти в систему</div>
+                </div>
             </div>
             <div class="control">
                 <button class="button is-text" @click="close">Отменить</button>
@@ -59,7 +61,6 @@
                 },
                 set: function (e) {
                     this.SET_LOGIN(e)
-                    // console.log(this.login)
                 }
             },
             user_password:{
@@ -68,7 +69,6 @@
                    return this.password
                 },
                 set: function (e) {
-
                     this.SET_PASSWORD(e)
                 },
             },
@@ -80,28 +80,13 @@
             // console.log(this.userValid)
         },
         methods:{
-            // enterSystem: function(){
-            //             const login = this.user.login
-            //     const password = this.user.password
-            //     // const {login, password} = this.user; или можно так
-            //     if (login && password) {
-            //             const Found = Users.filter(user => {
-            //
-            //                         return (user.login === login &&
-            //                             user.password === password
-            //
-            //                 )
-            //             });
-            //             if(Found.length === 1){
-            //                 Object.assign(activeUser, Found[0])
-            //                 this.closeModal();
-            //                     return true;
-            //             }
-            //         }
-            // },
+            ...mapActions([
+                'close_by_click'
+        ]),
+
             ...mapMutations({
                 closeModal: 'AUTORIZATION_MODAL',
-                VALID_USER: 'VALID_USER',
+                 check: 'VALID_USER',
                 SET_LOGIN: 'SET_LOGIN',
                 SET_PASSWORD: 'SET_PASSWORD',
                 MODAL_CLOSE: 'MODAL_CLOSE',
@@ -114,6 +99,9 @@
             close(){
                 this.closeModal();
             },
+            close_modal(){
+                this.close_modal();
+            }
         },
         data: function(){
             return{

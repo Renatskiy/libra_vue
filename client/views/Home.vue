@@ -9,6 +9,7 @@
 	          <h2 class="subtitle">
 	            Список книг офиса.
 	          </h2>
+				<bookFilter/>
 				<autorizationButton></autorizationButton>
 	          	<addBookButton></addBookButton>
 				<newUserButton/>
@@ -43,6 +44,7 @@ import activeUser from 'components/activeUser'
 import newUserButton from 'components/newUserButton'
 import newUserModal from 'components/newUserModal'
 import newUserForm from 'components/newUserForm'
+import bookFilter from 'components/bookFilter'
 
 // import returnBookButton from 'components/returnBookButton'
 
@@ -63,7 +65,8 @@ export default {
       activeUser,
       newUserButton,
       newUserModal,
-      newUserForm
+      newUserForm,
+      bookFilter
     
   }
 }

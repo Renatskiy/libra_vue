@@ -11,7 +11,6 @@ const activeUserStore = {
         done: [
             '12',
             '34',
-
         ],
         selected_done_task: 1,
         user: activeUser,
@@ -21,26 +20,26 @@ const activeUserStore = {
     mutations:{
         VALID_USER(state) {
             function valid() {
-                // console.log(state.login)
-                // console.log(state.password)
                 const {login, password} = state;
-                // const {login, password} = this.user; или можно так
-
                 if (login && password) {
                     const Found = Users.filter(user => {
 
                         return (user.login === login &&
                             user.password === password
-
                         )
                     });
                     if (Found.length === 1) {
                         Object.assign(activeUser, Found[0]);
 
                         return true;
+                    }else{
+                        alert('Данные не соответствуют');
                     }
+                }else{
+                    alert('Введите полные данные')
                 }
-            }valid();
+            }
+            valid();
         },
         SET_LOGIN(state, login){
             state.login = login;
@@ -57,7 +56,7 @@ const activeUserStore = {
 
     // Получение свойств объекта
     getters:{
-        selected_done_task: state => state.done[state.selected_done_task],
+        // selected_done_task: state => state.done[state.selected_done_task],
         login: ({login}) => login,
         password: ({password}) => password,
 
@@ -67,15 +66,13 @@ const activeUserStore = {
         async_user_active_change({commit}, user_active){
             commit('CHANGE_USER_STATE', user_active)
         },
-        close_modal({commit}, autorizationModal_visible){
-            commit('AUTORIZATION_MODAL', autorizationModal_visible)
-        }
+        // check({commit}){
+        //     commit('AUTORIZATION_MODAL');
+        //     console.log('closemodal')
+        // }
     },
     methods: {
-        // closes() {
-        //     console.log('sdfsdfsdfsdf')
-        //     this.$store.dispatch('close_modal','autorizationModal_visible')
-        // },
+
     }
 }
 
