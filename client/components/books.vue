@@ -117,6 +117,7 @@
 	import persone from 'store/persone.js';
 	import Users from 'store/users.js';
 	import activeUser from 'store/activeUser.js';
+	import bookFilterStore from 'store/bookFilter.js';
 	//import test from 'store/test.js';
 
 	export default {
@@ -133,8 +134,10 @@
 			}
 		},
 		mounted() {
-			this.$nextTick(function(){
-			})
+		    console.log('ывафываы')
+            const bookForFind = bookFilterStore.state.bookForFind;
+            const find = books.filter(i=>{return i.title.toLowerCase().indexOf(bookForFind.toLowerCase()) > -1})
+			console.log(find[0]);
 
 		},
 

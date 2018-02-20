@@ -47,12 +47,7 @@ const activeUserStore = {
         SET_PASSWORD(state, password){
             state.password = password;
         },
-
-
     },
-
-
-
 
     // Получение свойств объекта
     getters:{
@@ -66,10 +61,6 @@ const activeUserStore = {
         async_user_active_change({commit}, user_active){
             commit('CHANGE_USER_STATE', user_active)
         },
-        // check({commit}){
-        //     commit('AUTORIZATION_MODAL');
-        //     console.log('closemodal')
-        // }
     },
     methods: {
 
