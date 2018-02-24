@@ -91,10 +91,6 @@
                 SET_PASSWORD: 'SET_PASSWORD',
                 MODAL_CLOSE: 'MODAL_CLOSE',
             }),
-            closes() {
-                console.log('sdfsdfsdfsdf')
-                this.$store.dispatch('close_modal','autorizationModal_visible')
-            },
 
             close(){
                 this.closeModal();

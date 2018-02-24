@@ -1,28 +1,29 @@
 <template>
 	<section class="section">
 
-		<div class="books_find--filter" style="cursor: pointer" @click="">
-			<div class="books_find" v-for="(book, title) in filteredBookForShow()">
-				<p class="books_find-item">{{ book.title }} <br> <span>{{ book.author }}</span></p>
-			</div>
-		</div>
+		<!--<div class="books_find&#45;&#45;filter" style="cursor: pointer" @click="">-->
+			<!--<div class="books_find" v-for="(book) in filteredBookForShow()">-->
+				<!--<p class="books_find-item">{{ book.title }} <br> <span>{{ book.author }}</span></p>-->
+			<!--</div>-->
+		<!--</div>-->
 
 
 
 
-	<div class="row" v-if="!filteredBookForShow()">
-		<div class="books_preview books_preview--first-row">
+	<div class="row" v-if="">
+		<div class="books_preview books_preview--first-row" v-if="filteredBookForShow()">
 
-					<div class="media box first-row" style="cursor: pointer;" v-for="(book, index) in books" @click='showBook(index)'>
+					<div class="media box first-row" style="cursor: pointer;" v-for="(book, index) in filteredBookForShow()" @click='showBook(index)'>
 						<div class="media-content">
 							<div class="content">
 								<p>
 								<p class="image">
 									<img :src="book.img">
 								</p>
-				        <strong class="title">{{ book.title }}</strong> 
+
+				        <strong class="title">{{ book.title }}</strong>
 				        <br>
-				        <small>{{ book.autor }}</small> 
+				        <small>{{ book.autor }}</small>
 				        <br>
 				      </p>
 							</div>
@@ -31,12 +32,17 @@
 		</div>
 
 
-		<div class="books_preview">
+		<div class="books_preview" >
 
 			<div class="books">
 			<!-- <div v-model=''></div> -->
 			<div style="cursor: pointer;" class="media box order-book" @click='click(selectedBook)'>
-				  <figure class="media-left">
+				  <!--<figure class="media-left" v-if="filteredBookForShow()">-->
+				    <!--<p class="image">-->
+				      <!--<img :src="filteredBookForShow()[this.selektedIndex].img">-->
+				    <!--</p>-->
+				  <!--</figure>-->
+				<figure class="media-left" >
 				    <p class="image">
 				      <img :src="selectedBook.img">
 				    </p>
@@ -44,9 +50,10 @@
 				  <div class="media-content">
 				    <div class="content">
 				      <p>
-				        <strong class="title">{{ selectedBook.title }}</strong> 
+						  <!--<h1><p>{{ filteredBookForShow()[this.selektedIndex].title }}sdf</p></h1>-->
+				        <strong class="title">{{ selectedBook.title }}</strong>
 				        <br>
-				        <small>{{ selectedBook.author }}</small> 
+				        <small>{{ selectedBook.author }}</small>
 				        <br>
 				        <p>
 				        	<small><p>{{ selectedBook.descr }}</p></small>
@@ -140,18 +147,20 @@
 		data() {
 			return {
 				books,
-				selektedIndex: 2,
+				selektedIndex: '0',
+//                filteredBookForShow(){return false}
 				//test
 			}
 		},
 		computed: {
 			selectedBook: function(){
-				return books[this.selektedIndex];
+				return this.filteredBookForShow()[this.selektedIndex];
 			}
 		},
 		mounted() {
-
 		},
+		//если захожу под юзером и беру какую - нибудь книгу, то фильтр при первом фильтровании выдает ошибку
+		//после того, как начинаю тыкать в книги, фильтра работает нормльно и все отлично
 
 		methods: {
 			...mapMutations({
@@ -159,8 +168,6 @@
 
 				click: function(selectedBook){
 						this.show();
-//						console.log(selectedBook.bookId);
-//						console.log(activeUser.useBooksId)
 
 						var thisBook = JSON.stringify(selectedBook.bookId)
 						localStorage.setItem('selectedBook', thisBook);
@@ -170,12 +177,14 @@
 					},
 					showBook: function(index){
 						this.selektedIndex = index;
+                        console.log(this.selektedIndex)
 					},
 					filteredBookForShow: function () {
                         const bookForFind = bookFilterStore.state.bookForFind;
                         const find = books.filter(i=>{return i.title.toLowerCase().indexOf(bookForFind.toLowerCase()) > -1});
-                        console.log(find)
-                        return (find);
+                        if(find<=0){
+                            return books
+						}else return (find);
 
                     }
 			}
