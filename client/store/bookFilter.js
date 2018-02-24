@@ -10,9 +10,8 @@ const bookFilterStore = {
 
     mutations:{
         SET_FIND_BOOK(state, bookForFind, books){
-            // console.log(books)
-            // const find = (books, bookForFind)=>books.filter(i=>{return bookForFind.indexOf(i.title) > -1})
-            // state.bookForFind = bookForFind;
+            // console.log(state.bookForFind)
+
             state.bookForFind = bookForFind;
         },
 

@@ -27,6 +27,7 @@
                 },
                 set: function (e) {
                     this.SET_FIND_BOOK(e)
+//                    console.log(e)
                 }
             },
         },
