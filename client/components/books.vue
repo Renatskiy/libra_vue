@@ -1,6 +1,16 @@
 <template>
 	<section class="section">
-	<div class="row">
+
+		<div class="books_find--filter" style="cursor: pointer" @click="">
+			<div class="books_find" v-for="(book, title) in filteredBookForShow()">
+				<p class="books_find-item">{{ book.title }} <br> <span>{{ book.author }}</span></p>
+			</div>
+		</div>
+
+
+
+
+	<div class="row" v-if="!filteredBookForShow()">
 		<div class="books_preview books_preview--first-row">
 
 					<div class="media box first-row" style="cursor: pointer;" v-for="(book, index) in books" @click='showBook(index)'>
@@ -19,6 +29,8 @@
 						</div>
 				</div>
 		</div>
+
+
 		<div class="books_preview">
 
 			<div class="books">
@@ -69,6 +81,10 @@
 </template>
 
 <style>
+	.books_find-item{
+		border: 1px solid #bbb;
+		margin-bottom: 20px;
+	}
 	body {
 		font-size: 16px !important;
 	}
@@ -134,10 +150,6 @@
 			}
 		},
 		mounted() {
-		    console.log('ывафываы')
-            const bookForFind = bookFilterStore.state.bookForFind;
-            const find = books.filter(i=>{return i.title.toLowerCase().indexOf(bookForFind.toLowerCase()) > -1})
-			console.log(find[0]);
 
 		},
 
@@ -158,7 +170,14 @@
 					},
 					showBook: function(index){
 						this.selektedIndex = index;
-					}
+					},
+					filteredBookForShow: function () {
+                        const bookForFind = bookFilterStore.state.bookForFind;
+                        const find = books.filter(i=>{return i.title.toLowerCase().indexOf(bookForFind.toLowerCase()) > -1});
+                        console.log(find)
+                        return (find);
+
+                    }
 			}
 		}
 		
