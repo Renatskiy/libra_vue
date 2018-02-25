@@ -21,6 +21,7 @@
 	    <addBookModal></addBookModal>
 		<autorizationModal/>
 		<newUserModal/>
+		<bookDeskriptModal/>
 		<!--<autorizationModal/>-->
 
 	    <takeBookModal/>
@@ -45,6 +46,7 @@ import newUserButton from 'components/newUserButton'
 import newUserModal from 'components/newUserModal'
 import newUserForm from 'components/newUserForm'
 import bookFilter from 'components/bookFilter'
+import bookDeskriptModal from 'components/bookDeskriptModal'
 
 // import returnBookButton from 'components/returnBookButton'
 
@@ -66,7 +68,8 @@ export default {
       newUserButton,
       newUserModal,
       newUserForm,
-      bookFilter
+      bookFilter,
+      bookDeskriptModal
     
   }
 }

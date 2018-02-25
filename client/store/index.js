@@ -16,6 +16,7 @@ const state = {
   is_return_open: false,
   autorizationModal_visible: false,
   new_user_modal: false,
+    is_book_descr_modal_open: false,
 
     plugins: [createMutationsSharer({ predicate: ['CHANGE_USER_STATE', 'mutation2'] })],
 }
@@ -40,6 +41,9 @@ const mutations = {
     NEW_USER_MODAL(state) {
     state.new_user_modal  = !state.new_user_modal;
     },
+    BOOK_DESCRIPT_MODAL(state) {
+    state.is_book_descr_modal_open =!state.is_book_descr_modal_open;
+    }
 
 
 }

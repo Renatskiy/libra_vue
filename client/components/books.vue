@@ -2,18 +2,21 @@
 	<section class="section">
 
 	<div class="row" v-if="">
-		<div class="books_preview books_preview--first-row" v-if="">
+		<div class="books_preview books_preview--first-row">
 					<div class="media box first-row" style="cursor: pointer;" v-for="(book, index) in filteredBookForShow()" @click='click(book.bookId)'>
 						<div class="media-content">
 							<div class="content">
-								<p>
+
 								<p class="image">
 									<img :src="book.img">
 								</p>
 
-				        <strong class="title">{{ book.title }}</strong>
+				        <div>
+							<strong class="title">{{ book.title }}</strong>
+							<small>{{ book.author }}</small>
+						</div>
 				        <br>
-				        <small>{{ book.autor }}</small>
+
 				        <br>
 				      </p>
 							</div>
@@ -22,52 +25,7 @@
 		</div>
 
 
-		<!--<div class="books_preview" >-->
 
-			<!--<div class="books">-->
-			<!--&lt;!&ndash; <div v-model=''></div> &ndash;&gt;-->
-			<!--<div style="cursor: pointer;" class="media box order-book" @click='click(selectedBook)'>-->
-
-				<!--<figure class="media-left" >-->
-				    <!--<p class="image">-->
-				      <!--<img :src="selectedBook.img">-->
-				    <!--</p>-->
-				  <!--</figure>-->
-				  <!--<div class="media-content">-->
-				    <!--<div class="content">-->
-				      <!--<p>-->
-						  <!--&lt;!&ndash;<h1><p>{{ filteredBookForShow()[this.selektedIndex].title }}sdf</p></h1>&ndash;&gt;-->
-				        <!--<strong class="title">{{ selectedBook.title }}</strong>-->
-				        <!--<br>-->
-				        <!--<small>{{ selectedBook.author }}</small>-->
-				        <!--<br>-->
-				        <!--<p>-->
-				        	<!--<small><p>{{ selectedBook.descr }}</p></small>-->
-				        <!--</p>-->
-				      <!--</p>-->
-				    <!--</div>-->
-				    <!--<nav class="level is-mobile" style="display: none">-->
-				      <!--<div class="level-left">-->
-				        <!--<a class="level-item">-->
-				          <!--<span class="icon is-small"><i class="fa fa-reply"></i></span>-->
-				        <!--</a>-->
-				        <!--<a class="level-item">-->
-				          <!--<span class="icon is-small"><i class="fa fa-retweet"></i></span>-->
-				        <!--</a>-->
-				        <!--<a class="level-item">-->
-				          <!--<span class="icon is-small"><i class="fa fa-heart"></i></span>-->
-				        <!--</a>-->
-				      <!--</div>-->
-				    <!--</nav>-->
-				  <!--</div>-->
-				  <!--<div class="media-right">-->
-				    <!--&lt;!&ndash; <button class="delete"></button> &ndash;&gt;-->
-				  <!--</div>-->
-				  <!--&lt;!&ndash; </a> &ndash;&gt;-->
-				<!--</div>-->
-			<!--</div>-->
-
-	<!--</div>-->
 	</div>
 
 	</section>
@@ -82,6 +40,13 @@
 		font-size: 16px !important;
 	}
 
+	.media-content{
+		height: 100%;
+	}
+	.media-content > .content {
+		height: 100%;
+		display: flex;
+	}
 	.row{
 		display: flex;
 	}
@@ -95,16 +60,21 @@
 		flex-wrap: wrap;
 	}
 	.media.box.first-row{
-		height: 350px;
+		height: 100px;
 		width: 100%;
 		display: block;
 	}
 	.media+.media{
 		margin-top: 0;
+
 	}
 	.image{
-		height: 50%;
+		height: 100%;
 		width: 128px;
+	}
+	.image > img {
+		height: 100%;
+		width: unset;
 	}
 	.title{
 		font-size: 1rem;
@@ -114,6 +84,9 @@
 	}
 	.media.box.order-book{
 		height: 100%;
+	}
+	.content > div > strong {
+		display: block;
 	}
 
 
@@ -132,8 +105,7 @@
             return {
                 books,
                 selektedIndex: '0',
-//                filteredBookForShow(){return false}
-                //test
+
             }
         },
         computed: {
@@ -150,7 +122,9 @@
 
 		methods: {
 			...mapMutations({
-				show: 'TAKE_MODAL_TOGGLE'}),
+				show: 'BOOK_DESCRIPT_MODAL'}),
+			//TAKE_MODAL_TOGGLE - всунуть в мутацию для взятия книги
+
 
 				click: function(selectedBook){
 						this.show();
@@ -169,7 +143,7 @@
                         const bookForFind = bookFilterStore.state.bookForFind;
                         const find = books.filter(i=>{return i.title.toLowerCase().indexOf(bookForFind.toLowerCase()) > -1});
                         if(find.length<=0){
-                            return books;
+                            return {};
 						}else{console.log(find); return (find)};
 
                     }

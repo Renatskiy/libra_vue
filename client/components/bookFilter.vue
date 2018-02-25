@@ -5,7 +5,7 @@
             <input v-model="findBook" class="input" type="text" placeholder="Найти книгу" name="книг" value="js">
 
             <span class="icon is-small is-left">
-		      <i class="fa fa-child"></i>
+		      <i class="fa fa-book"></i>
 		    </span>
         </p>
     </div>
