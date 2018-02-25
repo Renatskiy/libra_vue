@@ -3,29 +3,29 @@
 
 	<div class="row" v-if="">
 		<div class="books_preview books_preview--first-row">
-					<div class="media box first-row" style="cursor: pointer;" v-for="(book, index) in filteredBookForShow()" @click='click(book.bookId)'>
-						<div class="media-content">
-							<div class="content">
 
+			<div   style="cursor: pointer;" v-for="(book, index) in filteredBookForShow()" @click='click(book.bookId)'>
+				<div class="media box first-row"  @click="thisBookIdForShow()">
+					<div class="media-content">
+						<div class="content">
 								<p class="image">
 									<img :src="book.img">
 								</p>
 
-				        <div>
-							<strong class="title">{{ book.title }}</strong>
-							<small>{{ book.author }}</small>
-						</div>
-				        <br>
-
-				        <br>
-				      </p>
+							<div>
+								<strong class="title">{{ book.title }}</strong>
+								<small>{{ book.author }}</small>
 							</div>
+							<br>
+							<br>
+
+
 						</div>
+					</div>
 				</div>
+
+			</div>
 		</div>
-
-
-
 	</div>
 
 	</section>
@@ -93,13 +93,11 @@
 </style>
 
 <script>
-	import {mapActions, mapState, mapMutations} from 'vuex';
+    import {mapActions, mapGetters, mapState, mapMutations} from 'vuex';
 	import books from 'store/books.js';
-//	import orderBook from 'store/persone.js'
-//	import persone from 'store/persone.js';
-//	import Users from 'store/users.js';
-//	import activeUser from 'store/activeUser.js';
     import bookFilterStore from 'store/bookFilter.js';
+    import bookIdForShow from 'store/thisBookIdForShow.js';
+
     export default {
         data() {
             return {
@@ -110,19 +108,35 @@
         },
         computed: {
 
+            ...mapGetters([
+                'thisBookIdForShow'
+            ]),
+            thisBookIdForShow: {
+                set(id) {
+                    this.BOOK_ID_FOR_SHOW(id)
+                    console.log(id)
+                },
+                get() {
+                    return this.thisBookIdForShow;
+
+                },
+            },
+
+
             selectedBook: function(){
                 return this.filteredBookForShow()[this.selektedIndex];
             }
         },
         mounted() {
-
         },
 
 //  Надо сделать единый метод приема индекса для книг и оттуда передавать уже и в showBook и в filteredBookForShow
 
 		methods: {
-			...mapMutations({
-				show: 'BOOK_DESCRIPT_MODAL'}),
+
+            ...mapMutations({
+                    show: 'BOOK_DESCRIPT_MODAL',
+                    BOOK_ID_FOR_SHOW:'BOOK_ID_FOR_SHOW'}),
 			//TAKE_MODAL_TOGGLE - всунуть в мутацию для взятия книги
 
 
@@ -137,14 +151,15 @@
 					},
 					showBook: function(index){
 						this.selektedIndex = index;
-                        console.log(this.selektedIndex)
+//                        console.log(this.selektedIndex)
 					},
 					filteredBookForShow: function () {
                         const bookForFind = bookFilterStore.state.bookForFind;
                         const find = books.filter(i=>{return i.title.toLowerCase().indexOf(bookForFind.toLowerCase()) > -1});
                         if(find.length<=0){
                             return {};
-						}else{console.log(find); return (find)};
+						}else{
+                            return (find)};
 
                     }
 			}

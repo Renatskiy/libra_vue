@@ -2,7 +2,7 @@
     <div class="field">
         <label class="label">Найти книгу</label>
         <p class="control has-icons-left has-icons-right">
-            <input v-model="findBook" class="input" type="text" placeholder="Найти книгу" name="книг" value="js">
+            <input v-model="findBook" class="input" type="text" placeholder="Найти книгу">
 
             <span class="icon is-small is-left">
 		      <i class="fa fa-book"></i>

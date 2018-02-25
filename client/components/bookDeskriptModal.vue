@@ -34,6 +34,7 @@
     <script>
         import {mapMutations, mapState} from 'vuex';
         import books from 'store/books.js';
+        import selectBook from 'components/books.vue';
 
         export default {
             components:{
@@ -42,6 +43,7 @@
                 return{
                     books,
                     index: '1',
+                    selectBook,
                 }
 
             },
@@ -65,7 +67,8 @@
 
             },
             mounted(){
-                console.log(this.item)
+//                console.log(this.item)
+                console.log(selectBook);
 //                console.log(books[this.index])
             },
         }

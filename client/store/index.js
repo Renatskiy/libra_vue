@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import createMutationsSharer from 'vuex-shared-mutations'
 import activeUser from './activeUserStore.js'
 import bookFilterStore from './bookFilter.js'
+import bookIdForShow from './thisBookIdForShow.js'
 
 Vue.use(Vuex)
 
@@ -20,6 +21,7 @@ const state = {
 
     plugins: [createMutationsSharer({ predicate: ['CHANGE_USER_STATE', 'mutation2'] })],
 }
+
 
 
 const mutations = {
@@ -43,7 +45,7 @@ const mutations = {
     },
     BOOK_DESCRIPT_MODAL(state) {
     state.is_book_descr_modal_open =!state.is_book_descr_modal_open;
-    }
+    },
 
 
 }
@@ -62,7 +64,7 @@ const store = new Vuex.Store({
   state,
   mutations,
   actions,
-    modules: {activeUser, bookFilterStore},
+    modules: {activeUser, bookFilterStore, bookIdForShow},
 })
 
 export default store
