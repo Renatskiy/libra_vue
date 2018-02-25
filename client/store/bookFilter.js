@@ -7,8 +7,8 @@ const bookFilterStore = {
     state: {
         bookForFind:"",
     },
-
     mutations:{
+
         SET_FIND_BOOK(state, bookForFind, books){
             // console.log(state.bookForFind)
 

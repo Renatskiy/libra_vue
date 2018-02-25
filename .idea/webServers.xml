@@ -58,6 +58,14 @@
           <option name="port" value="22118" />
         </fileTransfer>
       </webServer>
+      <webServer id="42ddccb7-714c-48dc-a59a-9cb99f48fe86" name="Xerox" url="http://93.174.131.172">
+        <fileTransfer host="93.174.131.172" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

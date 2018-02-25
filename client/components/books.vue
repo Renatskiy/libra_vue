@@ -5,7 +5,7 @@
 		<div class="books_preview books_preview--first-row">
 
 			<div   style="cursor: pointer;" v-for="(book, index) in filteredBookForShow()" @click='click(book.bookId)'>
-				<div class="media box first-row"  @click="thisBookIdForShow()">
+				<div class="media box first-row"  @click="thisBookIdForShow(book.bookId)">
 					<div class="media-content">
 						<div class="content">
 								<p class="image">
@@ -31,6 +31,78 @@
 	</section>
 </template>
 
+
+
+<script>
+    import {mapActions, mapGetters, mapState, mapMutations} from 'vuex';
+	import books from 'store/books.js';
+    import bookFilterStore from 'store/bookFilter.js';
+    import bookIdForShow from 'store/thisBookIdForShow.js';
+
+    export default {
+        data() {
+            return {
+                books,
+                selektedIndex: '0',
+            }
+        },
+        computed: {
+            ...mapGetters([
+                'thisBookIdForShow'
+            ]),
+
+            selectedBook: function(){
+                return this.filteredBookForShow()[this.selektedIndex];
+            }
+        },
+
+//  Надо сделать единый метод приема индекса для книг и оттуда передавать уже и в showBook и в filteredBookForShow
+
+		methods: {
+            thisBookIdForShow: {
+                get: function () {
+                    var ID = this.thisBookIdForShow;
+                    console.log(ID)
+                    // return this.thisBookIdForShow;
+
+                },
+                set: function (id) {
+                    this.BOOK_ID_FOR_SHOW(id)
+//                    console.log(e)
+                }
+            },
+            ...mapMutations({
+                    show: 'BOOK_DESCRIPT_MODAL',
+                    BOOK_ID_FOR_SHOW:'BOOK_ID_FOR_SHOW'}),
+			//TAKE_MODAL_TOGGLE - всунуть в мутацию для взятия книги
+
+
+				click: function(selectedBook){
+						this.show();
+
+						var thisBook = JSON.stringify(selectedBook)
+						localStorage.setItem('selectedBook', thisBook);
+
+						var x = localStorage.getItem('selectedBook')
+
+					},
+					showBook: function(index){
+						this.selektedIndex = index;
+//                        console.log(this.selektedIndex)
+					},
+					filteredBookForShow: function () {
+                        const bookForFind = bookFilterStore.state.bookForFind;
+                        const find = books.filter(i=>{return i.title.toLowerCase().indexOf(bookForFind.toLowerCase()) > -1});
+                        if(find.length<=0){
+                            return {};
+						}else{
+                            return (find)};
+
+                    }
+			}
+		}
+		
+</script>
 <style>
 	.books_find-item{
 		border: 1px solid #bbb;
@@ -91,78 +163,3 @@
 
 
 </style>
-
-<script>
-    import {mapActions, mapGetters, mapState, mapMutations} from 'vuex';
-	import books from 'store/books.js';
-    import bookFilterStore from 'store/bookFilter.js';
-    import bookIdForShow from 'store/thisBookIdForShow.js';
-
-    export default {
-        data() {
-            return {
-                books,
-                selektedIndex: '0',
-
-            }
-        },
-        computed: {
-
-            ...mapGetters([
-                'thisBookIdForShow'
-            ]),
-            thisBookIdForShow: {
-                set(id) {
-                    this.BOOK_ID_FOR_SHOW(id)
-                    console.log(id)
-                },
-                get() {
-                    return this.thisBookIdForShow;
-
-                },
-            },
-
-
-            selectedBook: function(){
-                return this.filteredBookForShow()[this.selektedIndex];
-            }
-        },
-        mounted() {
-        },
-
-//  Надо сделать единый метод приема индекса для книг и оттуда передавать уже и в showBook и в filteredBookForShow
-
-		methods: {
-
-            ...mapMutations({
-                    show: 'BOOK_DESCRIPT_MODAL',
-                    BOOK_ID_FOR_SHOW:'BOOK_ID_FOR_SHOW'}),
-			//TAKE_MODAL_TOGGLE - всунуть в мутацию для взятия книги
-
-
-				click: function(selectedBook){
-						this.show();
-
-						var thisBook = JSON.stringify(selectedBook)
-						localStorage.setItem('selectedBook', thisBook);
-
-						var x = localStorage.getItem('selectedBook')
-
-					},
-					showBook: function(index){
-						this.selektedIndex = index;
-//                        console.log(this.selektedIndex)
-					},
-					filteredBookForShow: function () {
-                        const bookForFind = bookFilterStore.state.bookForFind;
-                        const find = books.filter(i=>{return i.title.toLowerCase().indexOf(bookForFind.toLowerCase()) > -1});
-                        if(find.length<=0){
-                            return {};
-						}else{
-                            return (find)};
-
-                    }
-			}
-		}
-		
-</script>
