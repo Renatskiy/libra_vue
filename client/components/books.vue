@@ -5,7 +5,7 @@
 		<div class="books_preview books_preview--first-row">
 
 			<div   style="cursor: pointer;" v-for="(book, index) in filteredBookForShow()" @click='click(book.bookId)'>
-				<div class="media box first-row"  @click="thisBookIdForShow(book.bookId)">
+				<div class="media box first-row"  @click="thisBookIdForShowFun(book.bookId)">
 					<div class="media-content">
 						<div class="content">
 								<p class="image">
@@ -59,21 +59,24 @@
 //  Надо сделать единый метод приема индекса для книг и оттуда передавать уже и в showBook и в filteredBookForShow
 
 		methods: {
-            thisBookIdForShow: {
-                get: function () {
-                    var ID = this.thisBookIdForShow;
-                    console.log(ID)
-                    // return this.thisBookIdForShow;
-
-                },
-                set: function (id) {
-                    this.BOOK_ID_FOR_SHOW(id)
-//                    console.log(e)
-                }
+            thisBookIdForShowFun(e){
+                console.log(e)
+                this.BOOK_ID_FOR_SHOW(e)
+//                 get: function () {
+//                     var ID = this.thisBookIdForShow;
+//                     console.log(ID)
+//                     // return this.thisBookIdForShow;
+//
+//                 },
+//                 set: function (e) {
+//                     this.BOOK_ID_FOR_SHOW(e)
+// //                    console.log(e)
+//                 }
             },
             ...mapMutations({
                     show: 'BOOK_DESCRIPT_MODAL',
-                    BOOK_ID_FOR_SHOW:'BOOK_ID_FOR_SHOW'}),
+                BOOK_ID_FOR_SHOW: 'BOOK_ID_FOR_SHOW'
+            }),
 			//TAKE_MODAL_TOGGLE - всунуть в мутацию для взятия книги
 
 

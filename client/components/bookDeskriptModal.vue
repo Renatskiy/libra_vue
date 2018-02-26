@@ -3,11 +3,11 @@
             <div class="modal-background">
                 <div class="modal-content">
                     <div class="box">
-                        <div class="books"">
+                        <div class="books">
 
                             <figure class="media-left" >
                                 <p class="image">
-                                <img :src="books[this.item].img" >
+                                <img :src="currentBook.img" >
                                 </p>
                             </figure>
                             <div class="media-content">
@@ -15,10 +15,10 @@
                                     <p>
                                         <strong class="title"></strong>
                                         <br>
-                                        <small>{{ books[this.item].author }}</small>
+                                        <small>{{ currentBook.author }}</small>
                                         <br>
                                     </p>
-                                    <small>{{ books[this.item].descr }}</small>
+                                    <small>{{ currentBook.descr }}</small>
                                 </div>
                             </div>
                         </div>
@@ -32,9 +32,10 @@
     </template>
 
     <script>
-        import {mapMutations, mapState} from 'vuex';
+        import {mapActions, mapGetters, mapState, mapMutations} from 'vuex';
         import books from 'store/books.js';
         import selectBook from 'components/books.vue';
+        import bookIdForShow from 'store/thisBookIdForShow.js';
 
         export default {
             components:{
@@ -49,12 +50,22 @@
             },
             methods: {
                 ...mapMutations([
-                    'BOOK_DESCRIPT_MODAL']),
-                thisBook: function () {
-                    return books[this.item]
-                },
+                    'BOOK_DESCRIPT_MODAL',]),
+                // thisBook: function () {
+                //     return books[this.item]
+                // },
             },
             computed:{
+                currentBook() {
+                    var self = this;
+                    return books.filter(function (item) {
+
+                        return item.bookId === self.thisBookIdForShow
+                    })[0]
+                },
+                ...mapGetters([
+                    'thisBookIdForShow'
+                ]),
                 ...mapState([
                     'is_book_descr_modal_open']),
 
