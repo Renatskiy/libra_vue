@@ -4,7 +4,7 @@
 	<div class="row" v-if="">
 		<div class="books_preview books_preview--first-row">
 
-			<div   style="cursor: pointer;" v-for="(book, index) in filteredBookForShow()" @click='click(book.bookId)'>
+			<div class="books_index"  style="cursor: pointer;" v-for="(book, index) in filteredBookForShow()" @click='click(book.bookId)'>
 				<div class="media box first-row"  @click="thisBookIdForShowFun(book.bookId)">
 					<div class="media-content">
 						<div class="content">
@@ -97,7 +97,7 @@
                         const bookForFind = bookFilterStore.state.bookForFind;
                         const find = books.filter(i=>{return i.title.toLowerCase().indexOf(bookForFind.toLowerCase()) > -1});
                         if(find.length<=0){
-                            return {};
+                            return {books};//или пустой объект, когда будет тянуться из node
 						}else{
                             return (find)};
 
@@ -143,6 +143,9 @@
 		margin-top: 0;
 
 	}
+	figure .image {
+		height: 200px;
+	}
 	.image{
 		height: 100%;
 		width: 128px;
@@ -162,6 +165,10 @@
 	}
 	.content > div > strong {
 		display: block;
+	}
+	.books_index {
+		width: 60%;
+		margin-bottom: 20px;
 	}
 
 

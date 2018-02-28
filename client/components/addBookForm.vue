@@ -73,6 +73,7 @@
 //				console.log(newBook);
 
 				this.books.push(newBook);
+				console.log(books)
                 this.close();
 
 			},

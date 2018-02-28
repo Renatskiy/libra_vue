@@ -5,19 +5,21 @@
                     <div class="box">
                         <div class="books">
 
+
                             <figure class="media-left" >
+                                <p>
+                                    <strong class="title"></strong>
+                                    <br>
+                                    <small>{{ currentBook.author }}</small>
+                                    <br>
+                                </p>
                                 <p class="image">
                                 <img :src="currentBook.img" >
                                 </p>
                             </figure>
                             <div class="media-content">
                                 <div class="content">
-                                    <p>
-                                        <strong class="title"></strong>
-                                        <br>
-                                        <small>{{ currentBook.author }}</small>
-                                        <br>
-                                    </p>
+
                                     <small>{{ currentBook.descr }}</small>
                                 </div>
                             </div>
@@ -30,6 +32,11 @@
         </div>
 
     </template>
+    <style>
+    .books{
+    display: flex;
+    }
+    </style>
 
     <script>
         import {mapActions, mapGetters, mapState, mapMutations} from 'vuex';
