@@ -2,7 +2,7 @@
   <form action="" method="" class="form">
 
       <h2 class="title">Вернуть книгу</h2>
-    <div class="aray" v-for='(book) in people'>
+    <div class="aray" v-for='index in Users'>
       <div class="field">
         <label class="label">Название</label>
         <p class="control has-icons-left has-icons-right">
@@ -33,11 +33,14 @@
     import addBookModal from 'components/addBookModal'
   import books from 'store/books.js'
   import persone from 'store/persone.js';
+  import Users from 'store/users.js';
+
   export default {
     mounted() {
       // console.log(books[2]);
     },
       computed: {
+
         people: function () {
             return JSON.parse(localStorage.getItem('book', persone));
         },
@@ -65,6 +68,7 @@
     data: function(){
       return{
         //test,
+          Users,
         books,
         input: {
         title: '',

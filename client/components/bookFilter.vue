@@ -21,7 +21,6 @@
             ]),
             findBook: {
                 get: function () {
-                        // const find = (books, bookForFind)=>books.filter(i=>{return bookForFind.indexOf(i.title) > -1})
                     return this.bookForFind
 
                 },
@@ -41,9 +40,6 @@
         methods: {
             ...mapMutations(['SET_FIND_BOOK']),
         },
-        mounted(){
-            // console.log(books)
-        }
     }
 
 

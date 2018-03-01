@@ -53,9 +53,6 @@
       // console.log('takeBookForm');
     },
     methods: {
-
-
-
       edit: function(name, lastName, book ) {
           let z = localStorage.getItem('selectedBook');
           let bookItem = JSON.parse(z);
@@ -71,8 +68,6 @@
               if (result.length == 0) {
                   activeUser.useBooksId.push(bookItem);
 //                    var checkBookCount = (x,y)=>x.filter(i=> y.indexOf(i)> -1)
-
-
 
               } else {
                   alert('Еще одну???');

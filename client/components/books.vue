@@ -47,35 +47,22 @@
             }
         },
         computed: {
-            ...mapGetters([
-                'thisBookIdForShow'
-            ]),
 
             selectedBook: function(){
                 return this.filteredBookForShow()[this.selektedIndex];
-            }
+            },
+            ...mapGetters([
+                'thisBookIdForShow'
+            ]),
         },
-
-//  Надо сделать единый метод приема индекса для книг и оттуда передавать уже и в showBook и в filteredBookForShow
 
 		methods: {
             thisBookIdForShowFun(e){
-                console.log(e)
                 this.BOOK_ID_FOR_SHOW(e)
-//                 get: function () {
-//                     var ID = this.thisBookIdForShow;
-//                     console.log(ID)
-//                     // return this.thisBookIdForShow;
-//
-//                 },
-//                 set: function (e) {
-//                     this.BOOK_ID_FOR_SHOW(e)
-// //                    console.log(e)
-//                 }
             },
             ...mapMutations({
                     show: 'BOOK_DESCRIPT_MODAL',
-                BOOK_ID_FOR_SHOW: 'BOOK_ID_FOR_SHOW'
+                	BOOK_ID_FOR_SHOW: 'BOOK_ID_FOR_SHOW'
             }),
 			//TAKE_MODAL_TOGGLE - всунуть в мутацию для взятия книги
 
@@ -94,10 +81,12 @@
 //                        console.log(this.selektedIndex)
 					},
 					filteredBookForShow: function () {
+                const books = this.books;
                         const bookForFind = bookFilterStore.state.bookForFind;
                         const find = books.filter(i=>{return i.title.toLowerCase().indexOf(bookForFind.toLowerCase()) > -1});
                         if(find.length<=0){
-                            return {books};//или пустой объект, когда будет тянуться из node
+
+                            return {};
 						}else{
                             return (find)};
 

@@ -4,8 +4,6 @@
                 <div class="modal-content">
                     <div class="box">
                         <div class="books">
-
-
                             <figure class="media-left" >
                                 <p>
                                     <strong class="title"></strong>
@@ -24,6 +22,7 @@
                                 </div>
                             </div>
                         </div>
+                        <button class="button is-warning is-small" @click="TAKE_MODAL_TOGGLE">Взять книгу</button>
 
                     </div>
                 </div>
@@ -57,16 +56,16 @@
             },
             methods: {
                 ...mapMutations([
-                    'BOOK_DESCRIPT_MODAL',]),
-                // thisBook: function () {
-                //     return books[this.item]
-                // },
+                    'BOOK_DESCRIPT_MODAL',
+                'TAKE_MODAL_TOGGLE',]),
+            },
+            takeBook: {
+
             },
             computed:{
                 currentBook() {
                     var self = this;
                     return books.filter(function (item) {
-
                         return item.bookId === self.thisBookIdForShow
                     })[0]
                 },

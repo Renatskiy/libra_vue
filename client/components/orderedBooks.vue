@@ -1,25 +1,26 @@
 <template>
 <div>
 <div>
-  <div style="cursor: pointer;" class="media box" v-for='(user) in Users'  @click='show(index)'>
+  <div class="media box" v-for='(user) in Users'  >
       <!--showBookForReturn(index)-->
       <!--v-for="book in booksForShow()"-->
     <div class="media-content">
-            <div class="content">
+            <div class="content" style="display: block">
               <p>
-                <strong class="title">{{ user.name }}</strong>
-                <br>
-                <small>{{ user.login }}</small>
-                <br><small>Книги в пользовании :</small>
+                    <strong class="title">{{ user.name }}</strong>
+                    <br>
+                    <small>{{ user.login }}</small>
+                    <br><small>Книги в пользовании :</small>
 
-                <div class="media" v-for="(book) in  showBookForUser(user) ">
-                 <small>{{book.title}}</small>
-                </div>
-
-                <br>
-              </p>
+                    <div style="display: block" class="media" v-for="(book) in  showBookForUser(user) " @click='show(index)'>
+                     <small>{{book.title}}</small>
+                    <returnBookButton/>
+                </p>
             </div>
-            <returnBookButton/>
+
+                <br>
+
+            </div>
         </div>
   </div>
 </div>

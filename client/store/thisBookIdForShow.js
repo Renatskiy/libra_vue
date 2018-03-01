@@ -8,7 +8,7 @@ const bookIdForShow = {
         thisBookIdForShow: "",
     },
     mutations:{
-        BOOK_ID_FOR_SHOW(state, thisBookIdForShow, bookId) {
+        BOOK_ID_FOR_SHOW(state, thisBookIdForShow) {
             state.thisBookIdForShow = thisBookIdForShow;
         },
 
