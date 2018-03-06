@@ -18,7 +18,7 @@ const state = {
   autorizationModal_visible: false,
   new_user_modal: false,
     is_book_descr_modal_open: false,
-
+    clicked_book: '',
     plugins: [createMutationsSharer({ predicate: ['CHANGE_USER_STATE', 'mutation2'] })],
 }
 

@@ -14,7 +14,7 @@
 	          	<addBookButton></addBookButton>
 				<newUserButton/>
 				<activeUser/>
-	        </div>
+			</div>
 	      </div>
 	    </section>
 	    <books></books>

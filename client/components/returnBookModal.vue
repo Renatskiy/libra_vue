@@ -19,7 +19,6 @@
   export default {
     components:{
       returnBookForm,
-      // takeBookForm,
     },
     data(){
       return{
@@ -28,14 +27,15 @@
 
     },
     methods: {
-      ...mapMutations([
-        'RETURN_MODAL_TOGGLE'])
+      ...mapMutations({
+          RETURN_MODAL_TOGGLE: 'RETURN_MODAL_TOGGLE'
+      }),
+
     },
     computed: mapState([
       'is_return_open'
     ]),
     mounted(){
-      console.log('sdf')
     },
   }
 </script>

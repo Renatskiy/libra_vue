@@ -3,7 +3,7 @@
 <div>
 <section>
 
-  <button class="button is-warning is-small addButton" >Вернуть книгу</button>
+  <button class="button is-warning is-small addButton">Вернуть книгу</button>
   </section>
   </div>
 
@@ -27,9 +27,9 @@
       
       },
       methods:{
-      // ...mapMutations([
-      //   'RETURN_MODAL_TOGGLE'
-      // ]),
+       ...mapMutations([
+         'RETURN_MODAL_TOGGLE'
+       ]),
     },
 
     }

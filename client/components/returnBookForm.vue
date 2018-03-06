@@ -1,27 +1,30 @@
 <template>
   <form action="" method="" class="form">
-
-      <h2 class="title">Вернуть книгу</h2>
-    <div class="aray" v-for='index in Users'>
-      <div class="field">
-        <label class="label">Название</label>
-        <p class="control has-icons-left has-icons-right">
-          <div class="input" >{{ book }}
-        <span class="icon is-small is-left">
-            <i class="fa fa-book"></i>
+     <h2 class="title">Вернуть книгу</h2>
+    <div class="field">
+      <label class="label">Вернуть книгу</label>
+      <p class="control has-icons-left has-icons-right">
+      <div class="input" >
+          <span class="icon is-small is-left">
+              <i class="fa fa-book"></i>
           </span>
-      </div>
+        <span>{{ this.activeUser.name }}</span>
 
-        </p>
       </div>
+      <div class="input" v-for="book in showReturnBook()">
+        <span class="icon is-small is-left"></span>
+            <i class="fa fa-book"></i></span>
+        <span >{{ book.title }}</span>
 
+      </div>
     </div>
+
       <div class="field is-grouped">
         <div class="control">
-          <div class="button is-link" @click="retuBookFromAr">Вернуть</div>
+          <div class="button is-link" @click="deleteBook()">Вернуть</div>
         </div>
         <div class="control">
-          <button class="button is-text" @click="close">Отменить</button>
+          <button class="button is-text" @click="RETURN_MODAL_TOGGLE">Отменить</button>
         </div>
       </div>
 
@@ -32,49 +35,67 @@
     import {mapActions, mapState, mapMutations} from 'vuex';
     import addBookModal from 'components/addBookModal'
   import books from 'store/books.js'
-  import persone from 'store/persone.js';
+  import activeUser from 'store/activeUser.js';
   import Users from 'store/users.js';
 
   export default {
     mounted() {
-      // console.log(books[2]);
+//      console.log(localStorage.getItem('bookIdKey'))
     },
+
       computed: {
 
-        people: function () {
-            return JSON.parse(localStorage.getItem('book', persone));
-        },
-          persones: function () {
-              return JSON.parse(localStorage.getItem('this.persone'));
-          },
+
       },
     methods:{
-
         ...mapMutations({
-        closeWindow: 'RETURN_MODAL_TOGGLE'
+            RETURN_MODAL_TOGGLE: 'RETURN_MODAL_TOGGLE'
             }),
-        close:
-            function () {
-                this.closeWindow();
-            },
-        retuBookFromAr:
-            function () {
-                this.persones
-                console.log(this.persones);
 
-            }
+        showReturnBook(){
+            var item = localStorage.getItem('bookIdKey');
+
+            const selectedBooks = item;
+
+            for(const bookItem of selectedBooks){
+                const book = books.filter(b =>{
+                    return b.bookId == bookItem
+
+                });
+                this.selectedId = book[0].bookId;
+                console.log(activeUser)
+//                console.log(this.selectedId)
+                return book
+
+            };
+
         },
+        deleteBook(){
+
+          var item = this.selectedId;
+          var targetItem = activeUser.useBooksId;
+            for(var u of targetItem){
+                var forDelet = targetItem.filter(i=>
+                {return i == item})
+            }
+            activeUser.useBooksId.splice(forDelet.indexOf(0), 1)
+
+            return forDelet
+
+        },
+
+
+        },
+
 
     data: function(){
       return{
         //test,
           Users,
+          activeUser,
         books,
-        input: {
-        title: '',
-        descr: '',
-        autor: '',
-        img: ''},
+          selectedId: '',
+
       }
 
     },
