@@ -63,7 +63,6 @@
 
                 });
                 this.selectedId = book[0].bookId;
-                console.log(activeUser)
 //                console.log(this.selectedId)
                 return book
 
@@ -79,7 +78,7 @@
                 {return i == item})
             }
             activeUser.useBooksId.splice(forDelet.indexOf(0), 1)
-
+            this.RETURN_MODAL_TOGGLE();
             return forDelet
 
         },

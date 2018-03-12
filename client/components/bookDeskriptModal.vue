@@ -22,7 +22,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="button is-warning is-small" @click="TAKE_MODAL_TOGGLE">Взять книгу</button>
+                        <button class="button is-warning is-small" @click="openClose()">Взять книгу</button>
 
                     </div>
                 </div>
@@ -55,12 +55,14 @@
 
             },
             methods: {
-                ...mapMutations([
-                    'BOOK_DESCRIPT_MODAL',
-                'TAKE_MODAL_TOGGLE',]),
-            },
-            takeBook: {
-
+                ...mapMutations({
+                    BOOK_DESCRIPT_MODAL: 'BOOK_DESCRIPT_MODAL',
+                    TAKE_MODAL_TOGGLE: 'TAKE_MODAL_TOGGLE',
+                }),
+                openClose(){
+                    this.TAKE_MODAL_TOGGLE();
+                    this.BOOK_DESCRIPT_MODAL();
+                }
             },
             computed:{
                 currentBook() {
