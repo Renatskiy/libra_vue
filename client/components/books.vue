@@ -39,13 +39,17 @@
     import bookFilterStore from 'store/bookFilter.js';
     import bookIdForShow from 'store/thisBookIdForShow.js';
 
+
     export default {
         data() {
             return {
                 books,
                 selektedIndex: '0',
+				posts: [],
+				errors: [],
             }
         },
+
         computed: {
 
             selectedBook: function(){

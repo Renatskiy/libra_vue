@@ -58,7 +58,8 @@
 	import addBookModal from 'components/addBookModal'
 	import books from 'store/books.js';
 	import activeUser from 'store/activeUser.js';
-    import {mapActions, mapState, mapMutations} from 'vuex';
+    import {mapActions, mapState, mapMutations,} from 'vuex';
+    import API from 'lib/api.js'
 
     //import test from 'store/test.js'
 
@@ -70,7 +71,8 @@
 			edit: function(title, descr, author, img){
 
 				var newBook = {title: this.input.title, descr: this.input.descr, author: this.input.author, img: this.input.img};
-//				console.log(newBook);
+                API.insert_book(newBook);//прокидываю на сервак
+
 
 				this.books.push(newBook);
 				console.log(books)

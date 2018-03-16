@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import createMutationsSharer from 'vuex-shared-mutations'
 import activeUser from './activeUserStore.js'
 import bookFilterStore from './bookFilter.js'
+import books from './books.js'
 import bookIdForShow from './thisBookIdForShow.js'
 
 Vue.use(Vuex)
@@ -17,9 +18,10 @@ const state = {
   is_return_open: false,
   autorizationModal_visible: false,
   new_user_modal: false,
-    is_book_descr_modal_open: false,
-    clicked_book: '',
-    plugins: [createMutationsSharer({ predicate: ['CHANGE_USER_STATE', 'mutation2'] })],
+  is_book_descr_modal_open: false,
+  clicked_book: '',
+  plugins: [createMutationsSharer({ predicate: ['CHANGE_USER_STATE', 'mutation2'] })],
+    books,
 }
 
 
@@ -55,6 +57,9 @@ const actions = {
     close_by_click({commit}){
         commit('AUTORIZATION_MODAL');
     },
+    post_book(){
+
+    }
 }
 
 
