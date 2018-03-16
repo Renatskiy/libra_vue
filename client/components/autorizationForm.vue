@@ -75,9 +75,7 @@
         },
         mounted() {
 
-            // console.log(this.selected_done_task)
             console.log(this.login)
-            // console.log(this.userValid)
         },
         methods:{
             ...mapActions([
