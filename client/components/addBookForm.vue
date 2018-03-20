@@ -70,12 +70,13 @@
 		methods:{
 			edit: function(title, descr, author, img){
 
-				var newBook = {title: this.input.title, descr: this.input.descr, author: this.input.author, img: this.input.img};
+				var newBook = {title: this.input.title, descr: this.input.descr, author: this.input.author, img: this.input.img,
+                    bookCount: 1};
                 API.insert_book(newBook);//прокидываю на сервак
 
 
 				this.books.push(newBook);
-				console.log(books)
+				// console.log(books)
                 this.close();
 
 			},
