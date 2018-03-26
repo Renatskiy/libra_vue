@@ -90,10 +90,8 @@
 
     data: function(){
       return{
-        //test,
           Users,
           activeUser,
-        books,
           selectedId: '',
 
       }
