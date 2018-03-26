@@ -3,8 +3,9 @@ import Vuex from 'vuex'
 import createMutationsSharer from 'vuex-shared-mutations'
 import activeUser from './activeUserStore.js'
 import bookFilterStore from './bookFilter.js'
-import books from './books.js'
 import bookIdForShow from './thisBookIdForShow.js'
+import API from 'lib/api.js'
+
 
 Vue.use(Vuex)
 
@@ -21,7 +22,7 @@ const state = {
   is_book_descr_modal_open: false,
   clicked_book: '',
   plugins: [createMutationsSharer({ predicate: ['CHANGE_USER_STATE', 'mutation2'] })],
-    books,
+    books:[]
 }
 
 
@@ -30,6 +31,9 @@ const mutations = {
   ADD_BOOK(state, book) {
     state.books.push(book);
   },
+    SET_BOOKS(state, books){
+      state.books = books;
+    },
   SET_MODAL_VISIBILITY(state) {
     state.isModalVisible = !state.isModalVisible;
   },
@@ -52,14 +56,20 @@ const mutations = {
 
 }
 
+const getters = {
+  get_all_books:({books})=> books
+}
+
 const actions = {
 
     close_by_click({commit}){
         commit('AUTORIZATION_MODAL');
     },
-    post_book(){
 
-    }
+    async get_books({commit}){
+        const books = await API.get_books();
+        commit('SET_BOOKS', books);
+  },
 }
 
 
@@ -68,6 +78,7 @@ const actions = {
 const store = new Vuex.Store({
   state,
   mutations,
+  getters,
   actions,
     modules: {activeUser, bookFilterStore, bookIdForShow},
 })

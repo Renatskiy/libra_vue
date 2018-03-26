@@ -32,9 +32,8 @@
 </template>
 
 <script>
-    import {mapActions, mapState, mapMutations} from 'vuex';
+    import {mapActions, mapState, mapMutations, mapGetters} from 'vuex';
     import addBookModal from 'components/addBookModal'
-  import books from 'store/books.js'
   import activeUser from 'store/activeUser.js';
   import Users from 'store/users.js';
 
@@ -44,7 +43,9 @@
     },
 
       computed: {
-
+          ...mapGetters([
+              'get_all_books',
+          ])
 
       },
     methods:{
@@ -58,7 +59,7 @@
             const selectedBooks = item;
 
             for(const bookItem of selectedBooks){
-                const book = books.filter(b =>{
+                const book = this.get_all_books.filter(b =>{
                     return b.bookId == bookItem
 
                 });

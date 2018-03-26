@@ -56,7 +56,6 @@
 
 <script>
 	import addBookModal from 'components/addBookModal'
-	import books from 'store/books.js';
 	import activeUser from 'store/activeUser.js';
     import {mapActions, mapState, mapMutations,} from 'vuex';
     import API from 'lib/api.js'
@@ -74,13 +73,13 @@
                 API.insert_book(newBook);//прокидываю на сервак
 
 
-				this.books.push(newBook);
-				console.log(books)
+				this.add_book(newBook);
                 this.close();
 
 			},
             ...mapMutations({
-                closeModal: 'SET_MODAL_VISIBILITY'
+                closeModal: 'SET_MODAL_VISIBILITY',
+				add_book: 'ADD_BOOK',
             }),
             close(){
                 this.closeModal();
@@ -89,7 +88,7 @@
 		data: function(){
 			return{
 				//test,
-				books,
+				// books,
 				input: {
 				title: '',
 				descr: '',

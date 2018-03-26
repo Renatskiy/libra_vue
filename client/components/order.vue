@@ -14,13 +14,11 @@
 <script>
   import {mapActions, mapState, mapMutations} from 'vuex';
   import persone from 'store/persone.js';
-  import books from 'store/books.js';
   import Users from 'store/users.js';
 
   export default {
     data() {
       return {
-        books,
         persone,
       }
     },

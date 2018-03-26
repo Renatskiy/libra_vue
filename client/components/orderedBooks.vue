@@ -32,8 +32,7 @@
 
 
 <script>
-import {mapActions, mapState, mapMutations} from 'vuex';
-  import books from 'store/books.js'
+import {mapActions, mapState, mapMutations, mapGetters} from 'vuex';
   import persone from 'store/persone.js';
   import orderBook from 'store/persone.js';
   import Users from 'store/users.js';
@@ -48,24 +47,33 @@ import {mapActions, mapState, mapMutations} from 'vuex';
     data: function() {
       return {
           persone,
-          books,
           Users,
         }
       },
-    mounted() {
-        },
+    async mounted() {
+        await this.get_books
+        // console.log(Users)
+    },
           computed: {
+              ...mapGetters([
+                  'get_all_books'
+              ]),
+              ...mapActions([
+                  'get_books'
+              ]),
           },
     methods: {
                 showBookForUser: function (user) {
-                    console.log(Users)
                   let userBooks = user.useBooksId;
-                  let allBooks = this.books;
+                  let allBooks = this.get_all_books;
+
                   let arr = [];
                   for(let book of allBooks){
                       const {bookId} = book;
+
                       if(userBooks.includes(bookId)){
                           arr.push(book);
+
 
                       }
                   }return arr;
@@ -77,7 +85,9 @@ import {mapActions, mapState, mapMutations} from 'vuex';
 
         },
         ...mapMutations({
-            showModalReturn: 'RETURN_MODAL_TOGGLE'}),
+            showModalReturn: 'RETURN_MODAL_TOGGLE',
+            // SET_BOOKS: 'SET_BOOKS'
+        }),
 
       },
     }

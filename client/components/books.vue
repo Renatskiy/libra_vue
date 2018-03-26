@@ -35,18 +35,19 @@
 
 <script>
     import {mapActions, mapGetters, mapState, mapMutations} from 'vuex';
-	import books from 'store/books.js';
     import bookFilterStore from 'store/bookFilter.js';
     import bookIdForShow from 'store/thisBookIdForShow.js';
+    import API from 'lib/api.js'
+
 
 
     export default {
         data() {
             return {
-                books,
                 selektedIndex: '0',
 				posts: [],
 				errors: [],
+				filtered: [],
             }
         },
 
@@ -56,9 +57,16 @@
                 return this.filteredBookForShow()[this.selektedIndex];
             },
             ...mapGetters([
-                'thisBookIdForShow'
+                'thisBookIdForShow',
+				'get_all_books'
             ]),
+
         },
+		async mounted(){
+			await this.get_books()
+
+
+		},
 
 		methods: {
             thisBookIdForShowFun(e){
@@ -68,8 +76,9 @@
                     show: 'BOOK_DESCRIPT_MODAL',
                 	BOOK_ID_FOR_SHOW: 'BOOK_ID_FOR_SHOW'
             }),
-			//TAKE_MODAL_TOGGLE - всунуть в мутацию для взятия книги
-
+			...mapActions([
+			    'get_books'
+			]),
 
 				click: function(selectedBook){
 						this.show();
@@ -84,8 +93,12 @@
 						this.selektedIndex = index;
 //                        console.log(this.selektedIndex)
 					},
+
+
 					filteredBookForShow: function () {
-                const books = this.books;
+
+
+                        const books = this.get_all_books;
                         const bookForFind = bookFilterStore.state.bookForFind;
                         const find = books.filter(i=>{return i.title.toLowerCase().indexOf(bookForFind.toLowerCase()) > -1});
                         if(find.length<=0){

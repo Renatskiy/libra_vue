@@ -24,7 +24,6 @@
 
     import activeUser from 'store/activeUser.js';
     import Users from 'store/users.js';
-    import books from 'store/books.js';
     import booksInUse from 'store/booksInUse.js';
     import addBookButton from 'components/addBookButton'
     import returnBookModal from 'components/returnBookModal'
@@ -38,7 +37,6 @@
         data: function () {
             return {
                 activeUser,
-                books,
 
                 // use: this.inUse(),
             }
@@ -46,6 +44,7 @@
 
         computed: mapState([
             'is_return_open',
+            'books',
         ]),
         methods: {
             inUse: function () {
@@ -53,7 +52,7 @@
                     const activeUserBooks = this.activeUser.useBooksId;
                     for(const bookItem of activeUserBooks){
 
-                        const book = books.filter(b =>{
+                        const book = this.books.filter(b =>{
                             return b.bookId === bookItem
 
                         });

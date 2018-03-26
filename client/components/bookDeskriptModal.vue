@@ -39,7 +39,6 @@
 
     <script>
         import {mapActions, mapGetters, mapState, mapMutations} from 'vuex';
-        import books from 'store/books.js';
         import selectBook from 'components/books.vue';
         import bookIdForShow from 'store/thisBookIdForShow.js';
 
@@ -48,7 +47,6 @@
             },
             data(){
                 return{
-                    books,
                     index: '1',
                     selectBook,
                 }
@@ -67,7 +65,7 @@
             computed:{
                 currentBook() {
                     var self = this;
-                    return books.filter(function (item) {
+                    return this.books.filter(function (item) {
                         return item.bookId === self.thisBookIdForShow
                     })[0]
                 },
@@ -75,7 +73,8 @@
                     'thisBookIdForShow'
                 ]),
                 ...mapState([
-                    'is_book_descr_modal_open']),
+                    'is_book_descr_modal_open',
+                'books']),
 
                 item(){
 
@@ -86,9 +85,7 @@
 
             },
             mounted(){
-//                console.log(this.item)
-                console.log(selectBook);
-//                console.log(books[this.index])
+
             },
         }
     </script>

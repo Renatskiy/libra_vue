@@ -30,7 +30,6 @@
  
 <script>
 import Counter from 'components/Counter'
-// import autorizationModal from 'components/autorizationModal'
 import books from 'components/books'
 import addBookModal from 'components/addBookModal'
 import addBookForm from 'components/addBookForm'

@@ -28,8 +28,7 @@
 </template>
 
 <script>
-  import {mapMutations} from 'vuex';
-  import books from 'store/books.js'
+  import {mapMutations, mapGetters} from 'vuex';
   import persone from 'store/persone.js';
   import orderBook from 'store/persone.js';
   import Users from 'store/users.js';
@@ -39,7 +38,6 @@
     data: function(name, lastName, date){
       return {
         persone,
-        books,
         input: {
           name: '',
           lastName: '',
@@ -49,6 +47,11 @@
           activeUser,
       }
     },
+      computed: {
+          ...mapGetters([
+              'get_all_books',
+          ])
+      },
     mounted(){
       // console.log('takeBookForm');
     },

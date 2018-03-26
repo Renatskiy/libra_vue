@@ -13,7 +13,6 @@
   import {mapActions, mapState, mapMutations} from 'vuex';
 
 
-  import books from 'store/books.js'
   import persone from 'store/persone.js';
   import orderBook from 'store/persone.js';
   import returnBookModal from 'components/returnBookModal';

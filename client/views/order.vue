@@ -23,7 +23,6 @@
 <script>
 import orderedBooks from 'components/orderedBooks'
 import order from 'components/order'
-// import books from 'components/books'
 import addBookModal from 'components/addBookModal'
 import addBookForm from 'components/addBookForm'
 import addBookButton from 'components/addBookButton'
@@ -32,8 +31,7 @@ import returnBookModal from 'components/returnBookModal'
 
 export default {
   components: {
-    // books,
-    order,
+      order,
     addBookModal,
     addBookForm,
     addBookButton,

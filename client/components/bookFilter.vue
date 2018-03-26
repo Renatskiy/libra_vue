@@ -13,7 +13,6 @@
 <script>
     import {mapActions, mapGetters, mapState, mapMutations} from 'vuex';
     import bookFilterStore from 'store/bookFilter.js'
-    import books from 'store/books.js'
     export default {
         computed: {
             ...mapGetters([
