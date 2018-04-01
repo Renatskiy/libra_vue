@@ -87,8 +87,6 @@
 		},
 		data: function(){
 			return{
-				//test,
-				// books,
 				input: {
 				title: '',
 				descr: '',
