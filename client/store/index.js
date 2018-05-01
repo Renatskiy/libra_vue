@@ -80,7 +80,11 @@ const store = new Vuex.Store({
   mutations,
   getters,
   actions,
-    modules: {activeUser, bookFilterStore, bookIdForShow},
+    modules: {
+      activeUser, 
+      bookFilterStore, 
+      bookIdForShow
+    },
 })
 
 export default store

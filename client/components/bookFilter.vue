@@ -3,7 +3,6 @@
         <label class="label">Найти книгу</label>
         <p class="control has-icons-left has-icons-right">
             <input v-model="findBook" class="input" type="text" placeholder="Найти книгу">
-
             <span class="icon is-small is-left">
 		      <i class="fa fa-book"></i>
 		    </span>
@@ -16,28 +15,28 @@
     export default {
         computed: {
             ...mapGetters([
-                'bookForFind'
+                'get_book_for_find'
             ]),
             findBook: {
                 get: function () {
                     return this.bookForFind
-
                 },
-                set: function (e) {
-                    this.SET_FIND_BOOK(e)
-//                    console.log(e)
+                set: function (value) {
+                    this.SET_FIND_BOOK(value)
                 }
             },
         },
         data: function(){
             return{
-                //test,
 
             }
 
         },
         methods: {
-            ...mapMutations(['SET_FIND_BOOK']),
+            ...mapMutations([
+                'SET_FIND_BOOK',
+            ]),
+            
         },
     }
 

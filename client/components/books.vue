@@ -5,7 +5,7 @@
 		<div class="books_preview books_preview--first-row">
 
 			<div class="books_index"  style="cursor: pointer;" v-for="(book, index) in filteredBookForShow()" @click='click(book.bookId)'>
-				<div class="media box first-row"  @click="thisBookIdForShowFun(book.bookId)">
+				<div class="media box first-row"  @click="BOOK_ID_FOR_SHOW(book.bookId)">
 					<div class="media-content">
 						<div class="content">
 								<p class="image">
@@ -44,34 +44,27 @@
     export default {
         data() {
             return {
-                selektedIndex: '0',
-				posts: [],
-				errors: [],
-				filtered: [],
+                // selektedIndex: '0',
+			
             }
         },
 
         computed: {
 
-            selectedBook: function(){
-                return this.filteredBookForShow()[this.selektedIndex];
-            },
+            // selectedBook: function(){
+            //     return this.filteredBookForShow()[this.selektedIndex];
+            // },
             ...mapGetters([
-                'thisBookIdForShow',
+                // 'get_thisBookIdForShow',
 				'get_all_books'
             ]),
 
         },
-		async mounted(){
+		async mounted(){//принимает книги с сервера
 			await this.get_books()
-
-
 		},
 
 		methods: {
-            thisBookIdForShowFun(e){
-                this.BOOK_ID_FOR_SHOW(e)
-            },
             ...mapMutations({
                     show: 'BOOK_DESCRIPT_MODAL',
                 	BOOK_ID_FOR_SHOW: 'BOOK_ID_FOR_SHOW'

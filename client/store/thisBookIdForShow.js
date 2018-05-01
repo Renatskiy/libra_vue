@@ -9,12 +9,14 @@ const bookIdForShow = {
     mutations:{
         BOOK_ID_FOR_SHOW(state, thisBookIdForShow) {
             state.thisBookIdForShow = thisBookIdForShow;
+            // console.log(this.getters.get_thisBookIdForShow +'  123')
         },
 
 
     },
     getters: {
-        thisBookIdForShow: ({thisBookIdForShow}) => thisBookIdForShow,
+        get_thisBookIdForShow: ({thisBookIdForShow}) => thisBookIdForShow,
+       
     },
 
 

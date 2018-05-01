@@ -66,11 +66,11 @@
                 currentBook() {
                     var self = this;
                     return this.books.filter(function (item) {
-                        return item.bookId === self.thisBookIdForShow
+                        return item.bookId === self.get_thisBookIdForShow
                     })[0]
                 },
                 ...mapGetters([
-                    'thisBookIdForShow'
+                    'get_thisBookIdForShow'
                 ]),
                 ...mapState([
                     'is_book_descr_modal_open',
